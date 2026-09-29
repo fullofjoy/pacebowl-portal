@@ -126,14 +126,41 @@
           <span class="font-bold text-lg text-white tracking-tight">PaceBowl <span class="text-sky-400 font-mono text-xs px-2 py-0.5 rounded bg-sky-950/80 border border-sky-500/30">Studio</span></span>
         </div>
       </a>
-      <div class="flex items-center space-x-6 text-sm">
+      <div class="flex items-center space-x-3 sm:space-x-6 text-sm">
         <div class="hidden sm:flex items-center space-x-2 text-xs text-slate-400 bg-slate-900/80 border border-slate-800 px-3 py-1.5 rounded-full">
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
           <span>All Systems Operational</span>
         </div>
-        <a href="#tools" class="text-slate-400 hover:text-white transition">Tools</a>
-        <a href="#philosophy" class="hidden md:inline text-slate-400 hover:text-white transition">Manifesto</a>
-        <a href="#guides" class="text-slate-400 hover:text-white transition">Runbooks</a>
+
+        <!-- Matrix Switcher Dropdown -->
+        <div class="relative group">
+          <button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 hover:border-sky-500/40 text-xs text-slate-300 transition shadow-sm">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+            <span class="font-medium">Launch Tools</span>
+            <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-white transition transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="hidden group-hover:block absolute right-0 mt-1 w-64 bg-slate-900 border border-slate-800 rounded-xl shadow-2xl p-2 z-50">
+            <div class="text-[10px] font-mono uppercase tracking-wider text-slate-500 px-2 py-1">PaceBowl Active Matrix</div>
+            <a href="https://cursor.pacebowl.com" class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-slate-800/80 text-xs text-slate-200 transition">
+              <span class="w-7 h-7 rounded-lg bg-indigo-600 flex items-center justify-center text-[10px] font-bold text-white shadow-sm">CR</span>
+              <div>
+                <div class="font-bold text-white">Cursor Rules Studio</div>
+                <div class="text-[10px] text-slate-400">Next.js 15 & .mdc Rules</div>
+              </div>
+            </a>
+            <a href="https://comfy.pacebowl.com" class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-slate-800/80 text-xs text-slate-200 transition mt-1">
+              <span class="w-7 h-7 rounded-lg bg-sky-600 flex items-center justify-center text-[10px] font-bold text-white shadow-sm">CF</span>
+              <div>
+                <div class="font-bold text-white">ComfyUI Prompt Studio</div>
+                <div class="text-[10px] text-slate-400">Flux.1 & 1MP Latent Calc</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <a href="#tools" class="text-slate-400 hover:text-white transition hidden md:inline">Tools</a>
+        <a href="#philosophy" class="hidden lg:inline text-slate-400 hover:text-white transition">Manifesto</a>
+        <a href="#guides" class="text-slate-400 hover:text-white transition hidden md:inline">Runbooks</a>
         <a href="https://github.com/fullofjoy" target="_blank" rel="noopener" class="text-slate-400 hover:text-white transition">
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
         </a>
