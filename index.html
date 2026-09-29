@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PaceBowl Studio - Power Tools for AI Creators & Modern Engineers</title>
+  <meta name="description" content="PaceBowl Studio crafts zero-friction, 100% client-side micro-utilities for AI creators and developers. Featuring ComfyUI Latent Studio and Cursor Rules Generator.">
+  <meta name="keywords" content="pacebowl, ai tools, comfyui prompt generator, cursor rules generator, empty latent calculator, ai developer tools, client side utilities">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://pacebowl.com/">
+
+  <!-- Google Search Console Site Verification -->
+  <meta name="google-site-verification" content="p_5pqOozjilh_Db2M0Owy5AQCZHdlvAVFpxQ-Asdxcs" />
+
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="62cb9207-2003-4f8d-9079-768e39a35e72"></script>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pacebowl.com/">
+  <meta property="og:title" content="PaceBowl Studio - Power Tools for AI Creators & Modern Engineers">
+  <meta property="og:description" content="Zero-friction, 100% client-side micro-utilities for AI creators and developers. Zero server queues, zero telemetry.">
+  <meta property="og:site_name" content="PaceBowl Studio">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://pacebowl.com/">
+  <meta name="twitter:title" content="PaceBowl Studio - Power Tools for AI Creators & Modern Engineers">
+  <meta name="twitter:description" content="Zero-friction, 100% client-side utilities for ComfyUI, Cursor, and modern AI development.">
+
+  <!-- Schema.org JSON-LD for Organization & Tool Matrix (AEO & GEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://pacebowl.com/#organization",
+        "name": "PaceBowl Studio",
+        "url": "https://pacebowl.com/",
+        "logo": "https://pacebowl.com/favicon.ico",
+        "description": "Independent studio engineering lightweight, privacy-focused client-side productivity tools for AI artists, prompters, and software engineers.",
+        "sameAs": [
+          "https://github.com/fullofjoy"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://pacebowl.com/#website",
+        "url": "https://pacebowl.com/",
+        "name": "PaceBowl Studio Hub",
+        "publisher": {
+          "@id": "https://pacebowl.com/#organization"
+        },
+        "hasPart": [
+          {
+            "@type": "WebApplication",
+            "name": "Cursor Rules Generator (.mdc)",
+            "url": "https://cursor.pacebowl.com/",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "All",
+            "description": "Multi-file .cursor/rules/*.mdc generator with YAML frontmatter, path-scoped glob matching, and Next.js 15 presets."
+          },
+          {
+            "@type": "WebApplication",
+            "name": "ComfyUI Prompt & Latent Studio",
+            "url": "https://comfy.pacebowl.com/",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "All",
+            "description": "Trained 1-Megapixel Empty Latent aspect ratio calculator and Flux.1 natural language prompt builder for ComfyUI."
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Subtle background grid pattern */
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+    .glow-cyan {
+      box-shadow: 0 0 50px -15px rgba(56, 189, 248, 0.15);
+    }
+    .glow-indigo {
+      box-shadow: 0 0 50px -15px rgba(99, 102, 241, 0.15);
+    }
+  </style>
+</head>
+<body class="bg-[#07090e] text-slate-100 min-h-screen flex flex-col font-sans antialiased selection:bg-sky-500 selection:text-white bg-grid">
+
+  <!-- Header -->
+  <header class="border-b border-slate-800/80 bg-[#07090e]/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center space-x-3 group">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-500 via-indigo-600 to-purple-600 flex items-center justify-center font-bold text-white shadow-lg shadow-sky-500/20 group-hover:scale-105 transition transform">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <div>
+          <span class="font-bold text-lg text-white tracking-tight">PaceBowl <span class="text-sky-400 font-mono text-xs px-2 py-0.5 rounded bg-sky-950/80 border border-sky-500/30">Studio</span></span>
+        </div>
+      </a>
+      <div class="flex items-center space-x-6 text-sm">
+        <div class="hidden sm:flex items-center space-x-2 text-xs text-slate-400 bg-slate-900/80 border border-slate-800 px-3 py-1.5 rounded-full">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>All Systems Operational</span>
+        </div>
+        <a href="#tools" class="text-slate-400 hover:text-white transition">Tools</a>
+        <a href="#philosophy" class="hidden md:inline text-slate-400 hover:text-white transition">Manifesto</a>
+        <a href="#guides" class="text-slate-400 hover:text-white transition">Runbooks</a>
+        <a href="https://github.com/fullofjoy" target="_blank" rel="noopener" class="text-slate-400 hover:text-white transition">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-20 pb-16 px-4 text-center max-w-4xl mx-auto relative">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-950/40 border border-sky-500/30 text-sky-300 text-xs mb-6 font-mono">
+      <span>⚡ ZERO-GPU OVERHEAD</span>
+      <span class="text-slate-600">•</span>
+      <span>100% CLIENT-SIDE UTILITIES</span>
+      <span class="text-slate-600">•</span>
+      <span>NO CLOUD QUEUE</span>
+    </div>
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-6 leading-tight">
+      Precision Power Tools for <br class="hidden sm:inline" />
+      <span class="bg-gradient-to-r from-sky-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">AI Creators & Modern Engineers</span>
+    </h1>
+    <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
+      PaceBowl Studio crafts hyper-focused, zero-telemetry utilities engineered to solve real production bottlenecks in AI image generation, IDE configuration, and modern coding workflows.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="#tools" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-sky-500 to-indigo-600 text-white font-semibold text-sm shadow-lg shadow-sky-500/25 hover:from-sky-400 hover:to-indigo-500 transition transform hover:-translate-y-0.5">
+        Explore Active Tools ↓
+      </a>
+      <a href="https://github.com/fullofjoy" target="_blank" rel="noopener" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-slate-700 font-semibold text-sm transition">
+        Star on GitHub ⭐
+      </a>
+    </div>
+  </section>
+
+  <!-- Main Tools Showcase -->
+  <section id="tools" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+    <div class="text-center mb-12">
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3">Active Tool Matrix</h2>
+      <p class="text-slate-400 text-sm max-w-xl mx-auto">Each utility runs 100% inside your browser. No server-side telemetry, no GPU memory lockups, free forever.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+      <!-- Tool 1: Cursor Rules Studio -->
+      <div class="bg-slate-900/60 border border-indigo-500/30 rounded-2xl p-7 flex flex-col justify-between glow-indigo transition duration-300 hover:border-indigo-400/60 relative overflow-hidden group">
+        <div class="absolute -top-12 -right-12 w-48 h-48 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl bg-indigo-950/80 border border-indigo-500/30 flex items-center justify-center text-indigo-400 font-bold shadow-md shadow-indigo-500/20">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+            </div>
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-mono font-medium bg-indigo-950/80 text-indigo-300 border border-indigo-500/30">
+              cursor.pacebowl.com
+            </span>
+          </div>
+
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-indigo-300 transition">
+            Cursor Rules Generator (.mdc)
+          </h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Build modular, path-scoped <code class="text-indigo-300 bg-slate-950 px-1 py-0.5 rounded">.cursor/rules/*.mdc</code> configuration files with YAML frontmatter. Scope instructions via glob patterns to eliminate AI context token waste and prevent hallucinations.
+          </p>
+
+          <!-- Feature Bullets -->
+          <div class="space-y-2 mb-6 text-xs text-slate-300 font-mono">
+            <div class="flex items-center gap-2">
+              <span class="text-indigo-400">✓</span>
+              <span>Next.js 15 (App Router, Server Actions) & React 19 presets</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-indigo-400">✓</span>
+              <span>FastAPI (Pydantic v2), Go, Supabase, Tailwind v4 support</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-indigo-400">✓</span>
+              <span>1-Click Zip export & multi-target CLAUDE.md / Windsurf export</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="text-xs text-slate-500">
+            Guide: <a href="https://cursor.pacebowl.com/blog/cursor-rules-mdc-vs-cursorrules" class="text-indigo-400 hover:underline">MDC vs .cursorrules →</a>
+          </div>
+          <a href="https://cursor.pacebowl.com/" class="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold shadow-md shadow-indigo-600/30 transition">
+            Launch Generator →
+          </a>
+        </div>
+      </div>
+
+      <!-- Tool 2: ComfyUI Prompt & Latent Studio -->
+      <div class="bg-slate-900/60 border border-sky-500/30 rounded-2xl p-7 flex flex-col justify-between glow-cyan transition duration-300 hover:border-sky-400/60 relative overflow-hidden group">
+        <div class="absolute -top-12 -right-12 w-48 h-48 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl bg-sky-950/80 border border-sky-500/30 flex items-center justify-center text-sky-400 font-bold shadow-md shadow-sky-500/20">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+            </div>
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-mono font-medium bg-sky-950/80 text-sky-300 border border-sky-500/30">
+              comfy.pacebowl.com
+            </span>
+          </div>
+
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-sky-300 transition">
+            ComfyUI Prompt & Latent Studio
+          </h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Calculate trained 1-Megapixel Empty Latent dimensions for Flux.1 and SDXL to eliminate distorted anatomy. Generate expressive, natural language descriptive paragraphs tailored for the T5-XXL text encoder.
+          </p>
+
+          <!-- Feature Bullets -->
+          <div class="space-y-2 mb-6 text-xs text-slate-300 font-mono">
+            <div class="flex items-center gap-2">
+              <span class="text-sky-400">✓</span>
+              <span>8 Pre-calculated 1MP buckets (1024×1024, 1344×768, 896×1152)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-sky-400">✓</span>
+              <span>1-Click Copy EmptyLatentImage node JSON for direct ComfyUI paste</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-sky-400">✓</span>
+              <span>0 VRAM memory footprint — prevents CUDA Out of Memory crashes</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="text-xs text-slate-500">
+            Guide: <a href="https://comfy.pacebowl.com/blog/comfyui-empty-latent-resolution-guide" class="text-sky-400 hover:underline">1MP Latent Buckets Guide →</a>
+          </div>
+          <a href="https://comfy.pacebowl.com/" class="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 text-xs font-semibold shadow-md shadow-sky-500/30 transition">
+            Launch Studio →
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Future Incubator Teaser -->
+    <div class="mt-8 bg-slate-950/40 border border-dashed border-slate-800 rounded-2xl p-6 text-center">
+      <span class="text-xs font-mono uppercase tracking-wider text-slate-500">PaceBowl Laboratory • In Active Research</span>
+      <h4 class="text-base font-bold text-slate-200 mt-1">LLM Context Window & AST Budget Optimizer</h4>
+      <p class="text-xs text-slate-400 mt-1 max-w-lg mx-auto">
+        Intelligent client-side code trimmer that prunes boilerplate and compresses AST definitions before feeding code into Claude 3.7 or GPT-4o.
+      </p>
+    </div>
+  </section>
+
+  <!-- Engineering Manifesto / Principles -->
+  <section id="philosophy" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full border-t border-slate-800/80">
+    <div class="text-center mb-12">
+      <span class="text-xs font-mono uppercase tracking-widest text-sky-400">OUR PRODUCT MANIFESTO</span>
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Why PaceBowl is Built Differently</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-slate-900/40 border border-slate-800 rounded-xl p-6">
+        <div class="w-10 h-10 rounded-lg bg-sky-950 border border-sky-500/30 flex items-center justify-center text-sky-400 font-bold mb-4">
+          01
+        </div>
+        <h3 class="text-base font-bold text-white mb-2">100% Client-Side / Zero Lag</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">
+          No spinning loading wheels, no server queues, and no monthly API outages. Everything runs inside your browser sandbox in milliseconds.
+        </p>
+      </div>
+
+      <div class="bg-slate-900/40 border border-slate-800 rounded-xl p-6">
+        <div class="w-10 h-10 rounded-lg bg-indigo-950 border border-indigo-500/30 flex items-center justify-center text-indigo-400 font-bold mb-4">
+          02
+        </div>
+        <h3 class="text-base font-bold text-white mb-2">Absolute Data Privacy</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">
+          Your creative prompts, proprietary codebase rules, and system configurations never touch our servers. Zero tracking cookies, zero telemetry.
+        </p>
+      </div>
+
+      <div class="bg-slate-900/40 border border-slate-800 rounded-xl p-6">
+        <div class="w-10 h-10 rounded-lg bg-purple-950 border border-purple-500/30 flex items-center justify-center text-purple-400 font-bold mb-4">
+          03
+        </div>
+        <h3 class="text-base font-bold text-white mb-2">Crafted by Active Builders</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">
+          We do not build generic toys. Every tool solves real pain points encountered daily in modern full-stack development and local AI generation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curated Technical Runbooks -->
+  <section id="guides" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full border-t border-slate-800/80">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+      <div>
+        <span class="text-xs font-mono uppercase tracking-widest text-sky-400">ENGINEERING RUNBOOKS</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Deep-Dive Technical Guides</h2>
+      </div>
+      <p class="text-xs text-slate-400 max-w-md">Peer-reviewed architectural runbooks for Cursor IDE configuration and ComfyUI node optimization.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Guide 1 -->
+      <a href="https://cursor.pacebowl.com/blog/cursor-rules-mdc-vs-cursorrules" class="bg-slate-900/40 border border-slate-800/80 hover:border-indigo-500/50 rounded-xl p-6 transition group block">
+        <div class="flex items-center justify-between text-xs text-slate-500 mb-2 font-mono">
+          <span class="text-indigo-400">Cursor AI Architecture</span>
+          <span>8 min read</span>
+        </div>
+        <h3 class="text-base font-bold text-white group-hover:text-indigo-300 transition mb-2">
+          Cursor Rules (.mdc) vs .cursorrules: The Complete Migration Guide
+        </h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Why monolithic .cursorrules files degrade model intelligence and how to adopt path-scoped .mdc rule architecture with YAML frontmatter.
+        </p>
+      </a>
+
+      <!-- Guide 2 -->
+      <a href="https://comfy.pacebowl.com/blog/comfyui-empty-latent-resolution-guide" class="bg-slate-900/40 border border-slate-800/80 hover:border-sky-500/50 rounded-xl p-6 transition group block">
+        <div class="flex items-center justify-between text-xs text-slate-500 mb-2 font-mono">
+          <span class="text-sky-400">ComfyUI & Flux.1 Math</span>
+          <span>7 min read</span>
+        </div>
+        <h3 class="text-base font-bold text-white group-hover:text-sky-300 transition mb-2">
+          ComfyUI Empty Latent Resolution Guide (1MP Buckets)
+        </h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          The mathematics behind 1.0 megapixel resolution bucketing. Prevent double heads, stretched limbs, and distortion in Flux and SDXL.
+        </p>
+      </a>
+
+      <!-- Guide 3 -->
+      <a href="https://cursor.pacebowl.com/blog/how-to-write-nextjs-15-cursor-rules" class="bg-slate-900/40 border border-slate-800/80 hover:border-indigo-500/50 rounded-xl p-6 transition group block">
+        <div class="flex items-center justify-between text-xs text-slate-500 mb-2 font-mono">
+          <span class="text-indigo-400">Next.js 15 & AI Coding</span>
+          <span>6 min read</span>
+        </div>
+        <h3 class="text-base font-bold text-white group-hover:text-indigo-300 transition mb-2">
+          How to Write Bulletproof Cursor Rules for Next.js 15
+        </h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Prevent AI from using deprecated Pages router patterns or mixing Server/Client component boundaries in App Router projects.
+        </p>
+      </a>
+
+      <!-- Guide 4 -->
+      <a href="https://comfy.pacebowl.com/blog/flux-prompting-guide-t5-natural-language" class="bg-slate-900/40 border border-slate-800/80 hover:border-sky-500/50 rounded-xl p-6 transition group block">
+        <div class="flex items-center justify-between text-xs text-slate-500 mb-2 font-mono">
+          <span class="text-sky-400">Flux.1 T5 Prompting</span>
+          <span>9 min read</span>
+        </div>
+        <h3 class="text-base font-bold text-white group-hover:text-sky-300 transition mb-2">
+          Flux.1 Prompting: Mastering T5 Natural Language
+        </h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Why comma tag stuffing ruins Flux.1 generations. How the T5-XXL language model comprehends spatial relationships and narrative scenes.
+        </p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 bg-[#06080d] py-12 text-xs text-slate-500 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center space-x-3">
+        <div class="w-7 h-7 rounded-lg bg-gradient-to-tr from-sky-500 via-indigo-600 to-purple-600 flex items-center justify-center font-bold text-white text-xs">
+          PB
+        </div>
+        <div>
+          <span class="font-bold text-slate-300">PaceBowl Studio</span>
+          <span class="mx-2 text-slate-700">•</span>
+          <span>&copy; 2026. Zero-Friction Power Tools for the AI Era.</span>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-6 text-slate-400">
+        <a href="https://cursor.pacebowl.com" class="hover:text-indigo-400 transition">Cursor Rules Studio</a>
+        <a href="https://comfy.pacebowl.com" class="hover:text-sky-400 transition">ComfyUI Studio</a>
+        <a href="/llms.txt" class="hover:text-slate-200 transition">llms.txt</a>
+        <a href="/sitemap.xml" class="hover:text-slate-200 transition">Sitemap</a>
+        <a href="https://github.com/fullofjoy" target="_blank" rel="noopener" class="hover:text-slate-200 transition">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

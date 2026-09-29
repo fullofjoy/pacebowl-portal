@@ -1,0 +1,27 @@
+# PaceBowl Studio - Power Tools for AI Creators & Engineers
+
+> Production-grade, zero-friction, 100% client-side micro-utilities engineered for modern AI workflows.
+
+## Studio Hub
+- Homepage: https://pacebowl.com/
+- Architecture: 100% Client-Side Web Applications, Zero Server Queues, Zero Telemetry, $0 Cost.
+
+## Active Tool Matrix
+1. **Cursor Rules Generator (.mdc)**
+   - URL: https://cursor.pacebowl.com/
+   - Description: Web utility to build modular, path-scoped `.cursor/rules/*.mdc` files for Cursor AI, Claude Code (`CLAUDE.md`), and Windsurf (`.windsurfrules`).
+   - Stack Presets: Next.js 15 (App Router, Server Actions), React 19, FastAPI (Pydantic v2), Go, Supabase, Tailwind v4, Zod.
+   - Guides: https://cursor.pacebowl.com/blog/
+
+2. **ComfyUI Prompt & Latent Studio**
+   - URL: https://comfy.pacebowl.com/
+   - Description: Essential browser utility for Flux.1 and SDXL creators. Generates natural language descriptive prose optimized for the T5-XXL text encoder and calculates trained 1-Megapixel Empty Latent image dimensions.
+   - Key Buckets: 1024x1024 (1:1), 1344x768 (16:9), 768x1344 (9:16), 1152x896 (4:3), 896x1152 (3:4), 1536x640 (21:9).
+   - Zero VRAM: Runs completely in browser memory to prevent local GPU CUDA OOM crashes.
+   - Guides: https://comfy.pacebowl.com/blog/
+
+## Technical Runbooks & Knowledge Base
+- [Cursor Rules (.mdc) vs .cursorrules Migration Guide](https://cursor.pacebowl.com/blog/cursor-rules-mdc-vs-cursorrules.html)
+- [How to Write Next.js 15 Cursor Rules](https://cursor.pacebowl.com/blog/how-to-write-nextjs-15-cursor-rules.html)
+- [ComfyUI Empty Latent Resolution Guide (1MP Buckets)](https://comfy.pacebowl.com/blog/comfyui-empty-latent-resolution-guide.html)
+- [Flux.1 Prompting Guide: Mastering T5 Natural Language](https://comfy.pacebowl.com/blog/flux-prompting-guide-t5-natural-language.html)
