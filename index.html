@@ -20,6 +20,9 @@
   <!-- Umami Analytics -->
   <script defer src="https://umami-ruby-alpha-96.vercel.app/script.js" data-website-id="260de255-2ac2-4a9b-a17d-e4aec78f9ab1"></script>
 
+  <!-- OpenGEO (GeoTrace) - AI & Generative Search Conversion Attribution -->
+  <script defer data-domain="pacebowl.com" src="https://geo.pacebowl.com/geo.js"></script>
+
   <!-- Prevent Theme FOUC & Cross-Subdomain Sync -->
   <script>
     (function() {
@@ -394,7 +397,7 @@
           <div class="text-xs text-slate-500" data-i18n="cursor_guide">
             Guide: <a href="https://cursor.pacebowl.com/blog/cursor-rules-mdc-vs-cursorrules" class="text-indigo-600 dark:text-indigo-400 hover:underline">MDC vs .cursorrules →</a>
           </div>
-          <a href="https://cursor.pacebowl.com/" class="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold shadow-md shadow-indigo-600/30 transition" data-i18n="cursor_btn">
+          <a href="https://cursor.pacebowl.com/" onclick="window.geotrace && window.geotrace.track('launched_tool', { tool: 'cursor' })" class="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold shadow-md shadow-indigo-600/30 transition" data-i18n="cursor_btn">
             Launch Generator →
           </a>
         </div>
@@ -443,7 +446,7 @@
           <div class="text-xs text-slate-500" data-i18n="comfy_guide">
             Guide: <a href="https://comfy.pacebowl.com/blog/comfyui-empty-latent-resolution-guide" class="text-sky-600 dark:text-sky-400 hover:underline">1MP Latent Buckets Guide →</a>
           </div>
-          <a href="https://comfy.pacebowl.com/" class="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 text-xs font-semibold shadow-md shadow-sky-500/20 transition" data-i18n="comfy_btn">
+          <a href="https://comfy.pacebowl.com/" onclick="window.geotrace && window.geotrace.track('launched_tool', { tool: 'comfy' })" class="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 text-xs font-semibold shadow-md shadow-sky-500/20 transition" data-i18n="comfy_btn">
             Launch Studio →
           </a>
         </div>
@@ -492,7 +495,7 @@
           <div class="text-xs text-slate-500" data-i18n="geo_pillar">
             Pillar: <span class="text-emerald-600 dark:text-emerald-400 font-medium">Attribution · GEO & Stripe</span>
           </div>
-          <a href="https://geo.pacebowl.com/" class="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold shadow-md shadow-emerald-600/20 transition" data-i18n="geo_btn">
+          <a href="https://geo.pacebowl.com/" onclick="window.geotrace && window.geotrace.track('launched_tool', { tool: 'open_geo' })" class="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold shadow-md shadow-emerald-600/20 transition" data-i18n="geo_btn">
             Launch OpenGEO →
           </a>
         </div>
