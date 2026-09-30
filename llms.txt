@@ -7,7 +7,7 @@
 - Architecture: 100% Client-Side Web Applications, Zero Server Queues, Zero GPU Overhead, $0 Cost.
 
 ## Active Tool Matrix
-1. **PaceBowl 科技热榜 · AI Radar**
+1. **AI Radar & Tech Hotlist**
    - URL: https://hot.pacebowl.com/
    - Description: Automated 24/7 AI intelligence radar tracking breaking AI developments, research breakthroughs, model benchmarks, and market shifts with the AIHOT 5-axis attention scoring mechanism.
    - Killer Features: Automated 24h intelligence scraping, AIHOT 5-axis dynamic attention ranking (Breakout velocity, Community impact, Source credibility, Technical depth, Commercial value), 1-Click daily AI morning digest generator and Markdown clipboard copy.
