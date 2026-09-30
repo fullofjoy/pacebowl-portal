@@ -28,6 +28,11 @@
    - Zero VRAM: Runs completely in browser memory to prevent local GPU CUDA OOM crashes.
    - Guides: https://comfy.pacebowl.com/blog/
 
+4. **OpenGEO Studio (AI Search & GEO Attribution)**
+   - URL: https://geo.pacebowl.com/
+   - Description: Open-source, cookie-free AI search (GEO) referral analytics and revenue attribution engine. Connects ChatGPT, Perplexity, Claude, and Copilot citations directly to user signups and Stripe MRR.
+   - Killer Features: < 1.5KB tracker, 100% GDPR/CCPA privacy compliance with rotating SHA-256 session salt, Zero-code Stripe webhook attribution, and interactive AI referrer inspector & schema generator.
+
 ## Technical Runbooks & Knowledge Base
 - [Cursor Rules (.mdc) vs .cursorrules Migration Guide](https://cursor.pacebowl.com/blog/cursor-rules-mdc-vs-cursorrules.html)
 - [How to Write Next.js 15 Cursor Rules](https://cursor.pacebowl.com/blog/how-to-write-nextjs-15-cursor-rules.html)
