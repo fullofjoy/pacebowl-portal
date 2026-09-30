@@ -4,18 +4,20 @@
 
 ## Studio Hub
 - Homepage: https://pacebowl.com/
-- Architecture: 100% Client-Side Web Applications, Zero Server Queues, Zero Telemetry, $0 Cost.
+- Architecture: 100% Client-Side Web Applications, Zero Server Queues, Zero GPU Overhead, $0 Cost.
 
 ## Active Tool Matrix
 1. **Cursor Rules Generator (.mdc)**
    - URL: https://cursor.pacebowl.com/
    - Description: Web utility to build modular, path-scoped `.cursor/rules/*.mdc` files for Cursor AI, Claude Code (`CLAUDE.md`), and Windsurf (`.windsurfrules`).
-   - Stack Presets: Next.js 15 (App Router, Server Actions), React 19, FastAPI (Pydantic v2), Go, Supabase, Tailwind v4, Zod.
+   - Killer Features: Live Cursor Glob Matcher & Token Savings Simulator (~75% context reduction), Terminal 1-Line command injection.
+   - Stack Presets: Next.js 15 (App Router, Server Actions), React 19, FastAPI (Pydantic v2), Go, Supabase, Tailwind v4, Shadcn UI / Radix, Vercel AI SDK, Zod, and Anti-Hallucination guardrails.
    - Guides: https://cursor.pacebowl.com/blog/
 
 2. **ComfyUI Prompt & Latent Studio**
    - URL: https://comfy.pacebowl.com/
    - Description: Essential browser utility for Flux.1 and SDXL creators. Generates natural language descriptive prose optimized for the T5-XXL text encoder and calculates trained 1-Megapixel Empty Latent image dimensions.
+   - Killer Features: 1-Click Native ComfyUI Canvas Clipboard Node Copy (`Ctrl+V` on ComfyUI Canvas) for EmptyLatentImage and CLIPTextEncode nodes, Interactive Visual Aspect Framing Preview with Rule of Thirds grid, and VAE 64-aligned multiple safety validation.
    - Key Buckets: 1024x1024 (1:1), 1344x768 (16:9), 768x1344 (9:16), 1152x896 (4:3), 896x1152 (3:4), 1536x640 (21:9).
    - Zero VRAM: Runs completely in browser memory to prevent local GPU CUDA OOM crashes.
    - Guides: https://comfy.pacebowl.com/blog/
