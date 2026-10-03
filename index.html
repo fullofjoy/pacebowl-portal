@@ -239,7 +239,7 @@
               <span class="w-7 h-7 rounded-lg bg-blue-600 flex items-center justify-center text-[10px] font-bold text-white shadow-sm">DS</span>
               <div>
                 <div class="font-bold text-slate-900 dark:text-white" data-i18n="deepseek_name">DeepSeek Prompt Studio</div>
-                <div class="text-[10px] text-slate-500 dark:text-slate-400" data-i18n="deepseek_sub">R1 Reasoning & XML Framework</div>
+                <div class="text-[10px] text-slate-500 dark:text-slate-400" data-i18n="deepseek_sub">V4 & R1 Reasoning & XML Framework</div>
               </div>
             </a>
           </div>
@@ -325,7 +325,7 @@
       <!-- Quick sample prompts -->
       <div class="mt-3 flex flex-wrap items-center justify-center gap-2 text-xs text-slate-500 dark:text-slate-400">
         <span class="text-[11px] font-mono text-slate-400" data-i18n="dispatcher_try">Try:</span>
-        <button type="button" onclick="quickDispatch('DeepSeek R1 reasoning prompt')" class="hover:text-blue-500 dark:hover:text-blue-400 transition underline underline-offset-2">"DeepSeek R1 CoT"</button>
+        <button type="button" onclick="quickDispatch('DeepSeek V4 & R1 prompt')" class="hover:text-blue-500 dark:hover:text-blue-400 transition underline underline-offset-2">"DeepSeek V4 & R1"</button>
         <span>•</span>
         <button type="button" onclick="quickDispatch('Next.js 15 rules')" class="hover:text-sky-500 dark:hover:text-sky-400 transition underline underline-offset-2">"Next.js 15 rules"</button>
         <span>•</span>
@@ -556,32 +556,32 @@
           </div>
 
           <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-300 transition" data-i18n="ds_card_title">
-            DeepSeek Prompt Studio (R1 & V3)
+            DeepSeek Prompt Studio (V4 & R1)
           </h3>
           <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6" data-i18n="ds_card_desc">
-            Architect zero-shot chain-of-thought prompts and structured XML system directives tailored for DeepSeek-R1 reasoning and DeepSeek-V3 high-throughput models. Prevent recursive loops and unlock full logical depth.
+            Architect structured XML prompts tailored for DeepSeek-V4.1-Flash (1M context & vision), V4-Pro (Max Thinking), and DeepSeek-R1. Prevent context attenuation and eliminate conversational filler.
           </p>
 
           <!-- Feature Bullets -->
           <div class="space-y-2 mb-6 text-xs text-slate-700 dark:text-slate-300 font-mono">
             <div class="flex items-center gap-2">
               <span class="text-blue-500 dark:text-blue-400 font-bold">✓</span>
-              <span data-i18n="ds_b1">Dual-engine switch: R1 Recursive Reasoning vs V3 Rapid Execution</span>
+              <span data-i18n="ds_b1">Multi-model support: V4.1-Flash (1M Context), V4-Pro & R1</span>
             </div>
             <div class="flex items-center gap-2">
               <span class="text-blue-500 dark:text-blue-400 font-bold">✓</span>
-              <span data-i18n="ds_b2">Production XML semantic tags & negative constraint injection</span>
+              <span data-i18n="ds_b2">Controllable Thinking Modes (Off / Standard / Max Thinking)</span>
             </div>
             <div class="flex items-center gap-2">
               <span class="text-blue-500 dark:text-blue-400 font-bold">✓</span>
-              <span data-i18n="ds_b3">Live Token Arbitrage vs OpenAI o1 / Claude 3.7 cost calculator</span>
+              <span data-i18n="ds_b3">Multimodal vision directives & V4.1 Token Arbitrage calculator</span>
             </div>
           </div>
         </div>
 
         <div class="pt-6 border-t border-slate-100 dark:border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div class="text-xs text-slate-500" data-i18n="ds_pillar">
-            Pillar: <span class="text-blue-600 dark:text-blue-400 font-medium">Reasoning · CoT Prompting</span>
+            Pillar: <span class="text-blue-600 dark:text-blue-400 font-medium">Reasoning · V4 & R1 Architecture</span>
           </div>
           <a href="https://deepseek.pacebowl.com/" onclick="window.geotrace && window.geotrace.track('launched_tool', { tool: 'deepseek' })" class="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold shadow-md shadow-blue-600/20 transition" data-i18n="ds_btn">
             Launch DeepSeek Studio →
@@ -754,7 +754,7 @@
         geo_name: 'OpenGEO Studio',
         geo_sub: 'AI Search & Stripe Funnel',
         deepseek_name: 'DeepSeek Prompt Studio',
-        deepseek_sub: 'R1 Reasoning & XML Framework',
+        deepseek_sub: 'V4 & R1 Reasoning & XML Framework',
         nav_tools: 'Tools',
         nav_manifesto: 'Manifesto',
         nav_runbooks: 'Runbooks',
@@ -800,12 +800,12 @@
         geo_b3: 'Native detection of ChatGPT App, Perplexity, Claude & Dev AI',
         geo_pillar: 'Pillar: <span class="text-emerald-600 dark:text-emerald-400 font-medium">Attribution · GEO & Stripe</span>',
         geo_btn: 'Launch OpenGEO →',
-        ds_card_title: 'DeepSeek Prompt Studio (R1 & V3)',
-        ds_card_desc: 'Architect zero-shot chain-of-thought prompts and structured XML system directives tailored for DeepSeek-R1 reasoning and DeepSeek-V3 high-throughput models. Prevent recursive loops and unlock full logical depth.',
-        ds_b1: 'Dual-engine switch: R1 Recursive Reasoning vs V3 Rapid Execution',
-        ds_b2: 'Production XML semantic tags & negative constraint injection',
-        ds_b3: 'Live Token Arbitrage vs OpenAI o1 / Claude 3.7 cost calculator',
-        ds_pillar: 'Pillar: <span class="text-blue-600 dark:text-blue-400 font-medium">Reasoning · CoT Prompting</span>',
+        ds_card_title: 'DeepSeek Prompt Studio (V4 & R1)',
+        ds_card_desc: 'Architect structured XML prompts tailored for DeepSeek-V4.1-Flash (1M context & vision), V4-Pro (Max Thinking), and DeepSeek-R1. Prevent context attenuation and eliminate conversational filler.',
+        ds_b1: 'Multi-model support: V4.1-Flash (1M Context), V4-Pro & R1',
+        ds_b2: 'Controllable Thinking Modes (Off / Standard / Max Thinking)',
+        ds_b3: 'Multimodal vision directives & V4.1 Token Arbitrage calculator',
+        ds_pillar: 'Pillar: <span class="text-blue-600 dark:text-blue-400 font-medium">Reasoning · V4 & R1 Architecture</span>',
         ds_btn: 'Launch DeepSeek Studio →',
         footer_geo: 'OpenGEO Studio',
         footer_deepseek: 'DeepSeek Studio',
@@ -857,7 +857,7 @@
         geo_name: 'OpenGEO 商业归因',
         geo_sub: 'AI 搜索推荐与 Stripe 转化',
         deepseek_name: 'DeepSeek 深度提示词工坊',
-        deepseek_sub: 'R1 推理思维链 & XML 系统指令',
+        deepseek_sub: 'V4 旗舰 & R1 思维链工坊',
         nav_tools: '核心工具',
         nav_manifesto: '产品宣言',
         nav_runbooks: '技术手册',
@@ -901,12 +901,12 @@
         geo_b3: '智能识别 ChatGPT App、Perplexity、Claude 与 AI 编程工具',
         geo_pillar: '支柱定位: <span class="text-emerald-600 dark:text-emerald-400 font-medium">商业层 · GEO 流量与营收归因</span>',
         geo_btn: '启动 OpenGEO →',
-        ds_card_title: 'DeepSeek 深度提示词工坊 (R1 & V3)',
-        ds_card_desc: '专为 DeepSeek-R1 深度推理与 DeepSeek-V3 高吞吐模型定制的高阶 Prompt 架构器。支持零样本思维链激发、XML 语义标签封装与负向约束注入，杜绝思维死循环。',
-        ds_b1: '双引擎一键切换：R1 递归深度思考 vs V3 快速指令执行',
-        ds_b2: '工业级 XML 语义标签封装与负向防幻觉约束注入',
-        ds_b3: '实时 Token 套利对比 OpenAI o1 / Claude 3.7 成本节省计算器',
-        ds_pillar: '支柱定位: <span class="text-blue-600 dark:text-blue-400 font-medium">推理层 · R1 思维链与系统提示词</span>',
+        ds_card_title: 'DeepSeek 提示词工坊 (V4 & R1)',
+        ds_card_desc: '专为 DeepSeek-V4.1-Flash（100万上下文与多模态）、V4-Pro（极致深度思考）以及 R1 定制的高阶 Prompt 架构器。支持动态思维强度调节与 XML 语义封装，杜绝上下文衰减。',
+        ds_b1: '多模型支持：V4.1-Flash (100万 Token)、V4-Pro 与 R1',
+        ds_b2: '自由调节思考模式（关闭 / 标准思维链 / 极致思考）',
+        ds_b3: '多模态视觉识别结构化指令与 V4.1 算力套利计算器',
+        ds_pillar: '支柱定位: <span class="text-blue-600 dark:text-blue-400 font-medium">推理层 · V4 与 R1 底模架构</span>',
         ds_btn: '启动 DeepSeek 工坊 →',
         lab_badge: 'PaceBowl 实验室 • 正在研发',
         lab_title: 'LLM 上下文窗口与 AST 语法树预算优化器',
