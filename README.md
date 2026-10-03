@@ -17,6 +17,7 @@ Live Portal: [https://pacebowl.com](https://pacebowl.com)
 | **DeepSeek Studio** | [deepseek.pacebowl.com](https://deepseek.pacebowl.com) | Zero-latency prompt engineering studio for DeepSeek-R1 & V3 with 277+ agency personas | [`fullofjoy/deepseek-prompt-generator`](https://github.com/fullofjoy/deepseek-prompt-generator) |
 | **Cursor Rules Generator** | [cursor.pacebowl.com](https://cursor.pacebowl.com) | Modular `.cursor/rules/*.mdc` generator with Claude Code & Windsurf support | [`fullofjoy/cursor-rules-generator`](https://github.com/fullofjoy/cursor-rules-generator) |
 | **ComfyUI Prompt Studio** | [comfy.pacebowl.com](https://comfy.pacebowl.com) | Aspect ratio latent calculator, Danbooru weighting studio & SDXL/Flux presets | [`fullofjoy/comfyui-prompt-studio`](https://github.com/fullofjoy/comfyui-prompt-studio) |
+| **Reddit Growth Studio** | [reddit.pacebowl.com](https://reddit.pacebowl.com) | 15-word viral one-liner engine, AutoMod risk radar & karma growth matrix | [`fullofjoy/reddit-growth-studio`](https://github.com/fullofjoy/reddit-growth-studio) |
 | **AI Radar & Hotlist** | [hot.pacebowl.com](https://hot.pacebowl.com) | Real-time AI industry signals, model releases, and trending GitHub papers | Built-in Feed |
 
 ---
