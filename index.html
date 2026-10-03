@@ -651,7 +651,7 @@
       <p class="text-xs text-slate-600 dark:text-slate-400 max-w-md" data-i18n="runbooks_desc">Peer-reviewed architectural runbooks for Cursor IDE configuration and ComfyUI node optimization.</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Guide 1 -->
       <a href="https://cursor.pacebowl.com/blog/cursor-rules-mdc-vs-cursorrules" class="bg-white/80 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 hover:border-indigo-400 dark:hover:border-indigo-500/50 rounded-xl p-6 transition group block shadow-sm dark:shadow-none">
         <div class="flex items-center justify-between text-xs text-slate-500 mb-2 font-mono">
@@ -707,6 +707,36 @@
           Why comma tag stuffing ruins Flux.1 generations. How the T5-XXL language model comprehends spatial relationships and narrative scenes.
         </p>
       </a>
+
+      <!-- Guide 5: ComfyUI Prompt Generator Guide -->
+      <a href="https://comfy.pacebowl.com/blog/how-to-generate-comfyui-prompts" class="bg-white/80 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800/80 hover:border-sky-400 dark:hover:border-sky-500/50 rounded-xl p-6 transition group block shadow-sm dark:shadow-none">
+        <div class="flex items-center justify-between text-xs text-slate-500 mb-2 font-mono">
+          <span class="text-sky-600 dark:text-sky-400" data-i18n="g5_cat">ComfyUI Prompt Generator</span>
+          <span data-i18n="g5_time">7 min read</span>
+        </div>
+        <h3 class="text-base font-bold text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-300 transition mb-2" data-i18n="g5_title">
+          How to Generate High-Fidelity ComfyUI Prompts for Flux.1 & SDXL
+        </h3>
+        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="g5_desc">
+          Master prompt engineering for ComfyUI. Learn how to write descriptive T5 natural language for Flux.1, handle dual CLIP Text Encode nodes, and export LiteGraph nodes directly to canvas.
+        </p>
+      </a>
+
+      <!-- Guide 6: Explore All Guides -->
+      <div class="bg-gradient-to-br from-slate-100 to-sky-50 dark:from-slate-900/60 dark:to-sky-950/30 border border-dashed border-sky-300 dark:border-sky-500/30 rounded-xl p-6 flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-mono text-sky-600 dark:text-sky-400 uppercase tracking-wider" data-i18n="g6_cat">EXPLORE RUNBOOKS</span>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1 mb-2" data-i18n="g6_title">Looking for more AI architecture runbooks?</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="g6_desc">
+            Explore our curated guides for Cursor IDE rule synthesis, ComfyUI latent engineering, and OpenGEO AI search referral attribution.
+          </p>
+        </div>
+        <div class="pt-4 flex items-center gap-3">
+          <a href="https://cursor.pacebowl.com/blog/" class="text-xs text-indigo-600 dark:text-indigo-400 hover:underline font-semibold">Cursor Guides →</a>
+          <span class="text-slate-300 dark:text-slate-700">•</span>
+          <a href="https://comfy.pacebowl.com/blog/" class="text-xs text-sky-600 dark:text-sky-400 hover:underline font-semibold">ComfyUI Guides →</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -839,6 +869,13 @@
         g4_time: '9 min read',
         g4_title: 'Flux.1 Prompting: Mastering T5 Natural Language',
         g4_desc: 'Why comma tag stuffing ruins Flux.1 generations. How the T5-XXL language model comprehends spatial relationships and narrative scenes.',
+        g5_cat: 'ComfyUI Prompt Generator',
+        g5_time: '7 min read',
+        g5_title: 'How to Generate High-Fidelity ComfyUI Prompts for Flux.1 & SDXL',
+        g5_desc: 'Master prompt engineering for ComfyUI. Learn how to write descriptive T5 natural language for Flux.1, handle dual CLIP Text Encode nodes, and export LiteGraph nodes directly to canvas.',
+        g6_cat: 'EXPLORE RUNBOOKS',
+        g6_title: 'Looking for more AI architecture runbooks?',
+        g6_desc: 'Explore our curated guides for Cursor IDE rule synthesis, ComfyUI latent engineering, and OpenGEO AI search referral attribution.',
         footer_copy: '&copy; 2026. Zero-Friction Power Tools for the AI Era.',
         footer_hot: '🔥 AI Radar & Hotlist',
         footer_cursor: 'Cursor Rules Studio',
@@ -938,6 +975,13 @@
         g4_time: '9 分钟阅读',
         g4_title: 'Flux.1 提示词全攻略：精通 T5 自然语言长文本',
         g4_desc: '为什么传统逗号标签堆砌会毁掉 Flux.1 画面，以及 T5-XXL 大模型如何理解空间逻辑与叙事场景。',
+        g5_cat: 'ComfyUI 提示词生成器',
+        g5_time: '7 分钟阅读',
+        g5_title: '如何为 Flux.1 与 SDXL 生成高保真 ComfyUI 提示词全攻略',
+        g5_desc: '精通 ComfyUI 提示词工程。学习如何为 Flux.1 编写描述性 T5 自然语言，管理双 CLIP Text Encode 节点，并一键导出节点至画布。',
+        g6_cat: '浏览更多实战指南',
+        g6_title: '寻找更多 AI 架构实战指南？',
+        g6_desc: '浏览针对 Cursor IDE 规则合成、ComfyUI Latent 工程与 OpenGEO AI 搜索转化归因的精选技术指南。',
         footer_copy: '&copy; 2026. 面向 AI 时代的零摩擦高精度生产力工具。',
         footer_hot: '🔥 科技热榜 · AI Radar',
         footer_cursor: 'Cursor Rules 规则工坊',
