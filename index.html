@@ -202,7 +202,7 @@
             <span class="font-medium" data-i18n="matrix_btn">Launch Tools</span>
             <svg id="matrix-dropdown-arrow" class="w-3.5 h-3.5 text-slate-400 transition transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </button>
-          <div id="matrix-dropdown-menu" class="hidden absolute right-0 mt-1.5 w-64 max-w-[calc(100vw-1.5rem)] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-2xl p-2 z-50">
+          <div id="matrix-dropdown-menu" class="hidden absolute right-0 mt-1.5 w-64 max-w-[calc(100vw-1.5rem)] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-2xl p-2 z-50 before:content-[''] before:absolute before:-top-3 before:left-0 before:right-0 before:h-3">
             <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 dark:text-slate-500 px-2 py-1" data-i18n="matrix_title">PaceBowl Active Matrix</div>
             <a href="https://hot.pacebowl.com" class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/80 text-xs text-slate-700 dark:text-slate-200 transition">
               <span class="w-7 h-7 rounded-lg bg-gradient-to-tr from-rose-500 to-amber-500 flex items-center justify-center text-[10px] font-bold text-white shadow-sm flex-shrink-0">🔥</span>
@@ -1288,46 +1288,76 @@
       }
     }
 
-    // Matrix Switcher Dropdown (Touch & Hover Friendly)
-    function toggleMatrixDropdown(e) {
-      if (e) e.stopPropagation();
-      const menu = document.getElementById('matrix-dropdown-menu');
-      const arrow = document.getElementById('matrix-dropdown-arrow');
-      if (!menu) return;
-      const isHidden = menu.classList.contains('hidden');
-      if (isHidden) {
-        menu.classList.remove('hidden');
-        if (arrow) arrow.classList.add('rotate-180');
-      } else {
-        menu.classList.add('hidden');
-        if (arrow) arrow.classList.remove('rotate-180');
-      }
-    }
-
-    // Setup desktop hover and outside click for matrix dropdown
+    // Matrix Switcher Dropdown (Touch & Hover Friendly with Graceful Intent Delay)
     const matrixContainer = document.getElementById('matrix-dropdown-container');
     const matrixMenu = document.getElementById('matrix-dropdown-menu');
     const matrixArrow = document.getElementById('matrix-dropdown-arrow');
+    let matrixCloseTimer = null;
+    let lastHoverTime = 0;
+
+    function openMatrixMenu() {
+      if (matrixCloseTimer) {
+        clearTimeout(matrixCloseTimer);
+        matrixCloseTimer = null;
+      }
+      if (matrixMenu) matrixMenu.classList.remove('hidden');
+      if (matrixArrow) matrixArrow.classList.add('rotate-180');
+    }
+
+    function closeMatrixMenu() {
+      if (matrixCloseTimer) {
+        clearTimeout(matrixCloseTimer);
+        matrixCloseTimer = null;
+      }
+      if (matrixMenu) matrixMenu.classList.add('hidden');
+      if (matrixArrow) matrixArrow.classList.remove('rotate-180');
+    }
+
+    function scheduleCloseMatrixMenu() {
+      if (matrixCloseTimer) clearTimeout(matrixCloseTimer);
+      matrixCloseTimer = setTimeout(() => {
+        closeMatrixMenu();
+      }, 280); // 280ms grace period prevents accidental collapse while cursor moves
+    }
+
+    function toggleMatrixDropdown(e) {
+      if (e) {
+        e.stopPropagation();
+      }
+      if (!matrixMenu) return;
+      const isHidden = matrixMenu.classList.contains('hidden');
+      
+      // If user hovers and clicks immediately within 500ms, keep it open rather than closing!
+      const now = Date.now();
+      if (!isHidden && now - lastHoverTime < 500) {
+        openMatrixMenu();
+        return;
+      }
+
+      if (isHidden) {
+        openMatrixMenu();
+      } else {
+        closeMatrixMenu();
+      }
+    }
 
     if (matrixContainer && matrixMenu) {
       matrixContainer.addEventListener('mouseenter', () => {
         if (window.matchMedia('(hover: hover)').matches) {
-          matrixMenu.classList.remove('hidden');
-          if (matrixArrow) matrixArrow.classList.add('rotate-180');
+          lastHoverTime = Date.now();
+          openMatrixMenu();
         }
       });
       matrixContainer.addEventListener('mouseleave', () => {
         if (window.matchMedia('(hover: hover)').matches) {
-          matrixMenu.classList.add('hidden');
-          if (matrixArrow) matrixArrow.classList.remove('rotate-180');
+          scheduleCloseMatrixMenu();
         }
       });
     }
 
     document.addEventListener('click', (e) => {
       if (matrixContainer && !matrixContainer.contains(e.target)) {
-        if (matrixMenu) matrixMenu.classList.add('hidden');
-        if (matrixArrow) matrixArrow.classList.remove('rotate-180');
+        closeMatrixMenu();
       }
     });
 
