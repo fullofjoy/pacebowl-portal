@@ -249,6 +249,13 @@
                 <div class="text-[10px] text-slate-500 dark:text-slate-400 truncate" data-i18n="reddit_sub">15-Word One-Liners & AutoMod Radar</div>
               </div>
             </a>
+            <a href="https://sora.pacebowl.com" class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/80 text-xs text-slate-700 dark:text-slate-200 transition mt-1">
+              <span class="w-7 h-7 rounded-lg bg-gradient-to-tr from-purple-600 to-pink-600 flex items-center justify-center text-[10px] font-bold text-white shadow-sm flex-shrink-0">SR</span>
+              <div class="min-w-0">
+                <div class="font-bold text-slate-900 dark:text-white truncate" data-i18n="sora_name">Sora Video Studio</div>
+                <div class="text-[10px] text-slate-500 dark:text-slate-400 truncate" data-i18n="sora_sub">Cinematic Camera Motion & Optics</div>
+              </div>
+            </a>
           </div>
         </div>
 
@@ -640,6 +647,51 @@
         </div>
       </div>
 
+      <!-- Tool 7: Sora Video Studio -->
+      <div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-purple-500/50 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-xl dark:shadow-none hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-950/60 border border-purple-200 dark:border-purple-500/30 flex items-center justify-center text-purple-600 dark:text-purple-400 text-xl font-bold">
+              🎬
+            </div>
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-mono font-medium bg-purple-100 dark:bg-purple-950/80 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-500/30">
+              sora.pacebowl.com
+            </span>
+          </div>
+
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-300 transition" data-i18n="sora_card_title">
+            Sora Video Studio
+          </h3>
+          <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed mb-6" data-i18n="sora_card_desc">
+            Cinematic video prompt synthesizer and camera motion rig simulator for OpenAI Sora. Eliminates object morphing and temporal glitches with 35mm anamorphic optics and anti-morphing guardrails.
+          </p>
+
+          <ul class="space-y-2 mb-6 text-xs text-slate-600 dark:text-slate-400">
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+              <span data-i18n="sora_feat1">FPV drone, 360 orbit, dolly zoom & crane camera rig trajectories</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+              <span data-i18n="sora_feat2">35mm anamorphic, IMAX 70mm & f/1.4 shallow depth-of-field optics</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+              <span data-i18n="sora_feat3">Temporal consistency negative guardrails (Anti-morphing physics)</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="pt-6 border-t border-slate-100 dark:border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="text-xs text-slate-500" data-i18n="sora_pillar">
+            Pillar: <span class="text-purple-600 dark:text-purple-400 font-medium">Video · Spacetime Latent Motion</span>
+          </div>
+          <a href="https://sora.pacebowl.com/" onclick="window.geotrace && window.geotrace.track('launched_tool', { tool: 'sora' })" class="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 rounded-lg bg-purple-600 hover:bg-purple-500 text-white text-xs font-semibold shadow-md shadow-purple-600/20 transition" data-i18n="sora_btn">
+            Launch Sora Studio →
+          </a>
+        </div>
+      </div>
+
     </div>
 
     <!-- Future Incubator Teaser -->
@@ -815,6 +867,7 @@
         <a href="https://geo.pacebowl.com" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition font-medium" data-i18n="footer_geo">OpenGEO Studio</a>
         <a href="https://deepseek.pacebowl.com" class="hover:text-blue-600 dark:hover:text-blue-400 transition font-medium" data-i18n="footer_deepseek">DeepSeek Studio</a>
         <a href="https://reddit.pacebowl.com" class="hover:text-orange-600 dark:hover:text-orange-400 transition font-medium" data-i18n="footer_reddit">Reddit Studio</a>
+        <a href="https://sora.pacebowl.com" class="hover:text-purple-600 dark:hover:text-purple-400 transition font-medium" data-i18n="footer_sora">Sora Studio</a>
         <a href="/llms.txt" class="hover:text-slate-900 dark:hover:text-slate-200 transition">llms.txt</a>
         <a href="/sitemap.xml" class="hover:text-slate-900 dark:hover:text-slate-200 transition">Sitemap</a>
         <a href="https://buymeacoffee.com/pacebowl" target="_blank" rel="noopener noreferrer" data-umami-event="footer-sponsor-coffee" class="text-amber-600 dark:text-amber-400 hover:underline flex items-center gap-1 font-medium">☕ <span data-i18n="footer_coffee">Buy me a coffee</span></a>
@@ -934,7 +987,28 @@
         footer_copy: '&copy; 2026. Zero-Friction Power Tools for the AI Era.',
         footer_hot: '🔥 AI Radar & Hotlist',
         footer_cursor: 'Cursor Rules Studio',
-        footer_comfy: 'ComfyUI Studio'
+        footer_comfy: 'ComfyUI Studio',
+        footer_deepseek: 'DeepSeek Studio',
+        footer_reddit: 'Reddit Studio',
+        footer_sora: 'Sora Video Studio',
+        reddit_name: 'Reddit Growth Studio',
+        reddit_sub: '15-Word One-Liners & AutoMod Radar',
+        reddit_card_title: 'Reddit Growth Studio',
+        reddit_card_desc: 'All-in-one growth toolkit for indie hackers & creators on Reddit. Features 15-word viral one-liner engine, real-time AutoMod spam radar, and stage-based karma farming matrices.',
+        reddit_feat1: '15-Word Viral One-Liner Engine with 5 native humor styles',
+        reddit_feat2: 'Real-time AutoMod link & commercial spam filter radar',
+        reddit_feat3: 'High-converting showcase title crafter with safe body templates',
+        reddit_pillar: 'Pillar: <span class="text-orange-600 dark:text-orange-400 font-medium">Growth · Community Hacker Matrix</span>',
+        reddit_btn: 'Launch Reddit Studio →',
+        sora_name: 'Sora Video Studio',
+        sora_sub: 'Cinematic Camera Motion & Optics',
+        sora_card_title: 'Sora Video Studio',
+        sora_card_desc: 'Cinematic video prompt synthesizer and camera motion rig simulator for OpenAI Sora. Eliminates object morphing and temporal glitches with 35mm anamorphic optics and anti-morphing guardrails.',
+        sora_feat1: 'FPV drone, 360 orbit, dolly zoom & crane camera rig trajectories',
+        sora_feat2: '35mm anamorphic, IMAX 70mm & f/1.4 shallow depth-of-field optics',
+        sora_feat3: 'Temporal consistency negative guardrails (Anti-morphing physics)',
+        sora_pillar: 'Pillar: <span class="text-purple-600 dark:text-purple-400 font-medium">Video · Spacetime Latent Motion</span>',
+        sora_btn: 'Launch Sora Studio →'
       },
       zh: {
         nav_status: '所有系统正常运行',
@@ -1042,7 +1116,27 @@
         footer_cursor: 'Cursor Rules 规则工坊',
         footer_comfy: 'ComfyUI 提示词工坊',
         footer_geo: 'OpenGEO 商业归因工坊',
-        footer_deepseek: 'DeepSeek 深度工坊'
+        footer_deepseek: 'DeepSeek 深度工坊',
+        footer_reddit: 'Reddit 增长工坊',
+        footer_sora: 'Sora 视频工坊',
+        reddit_name: 'Reddit 增长工坊',
+        reddit_sub: '15字爆款神评与发帖风控雷达',
+        reddit_card_title: 'Reddit 增长工坊 (Reddit Studio)',
+        reddit_card_desc: '专为出海独立开发者与创作者打造的 Reddit 起号引流全能矩阵。涵盖 15 字爆款神评引擎、实时 AutoMod 违禁风控体检与分级版块导航。',
+        reddit_feat1: '15字地道单行神评引擎 (5大原生幽默流派)',
+        reddit_feat2: '实时 AutoMod 违禁外链与推销敏感词雷达',
+        reddit_feat3: '高转化出海展示贴标题生成器与防吞安全发帖模板',
+        reddit_pillar: '维度: <span class="text-orange-600 dark:text-orange-400 font-medium">增长 · 社区极客获客矩阵</span>',
+        reddit_btn: '启动 Reddit 工坊 →',
+        sora_name: 'Sora 视频工坊',
+        sora_sub: '电影级运镜与光学参数合成',
+        sora_card_title: 'Sora 电影级视频提示词工坊',
+        sora_card_desc: '专为 OpenAI Sora 打造的电影级运镜与提示词合成器。精细控制穿越机、希区柯克变焦、35mm 变形宽荧幕与流体光影，内置防多肢崩坏时间连续性约束。',
+        sora_feat1: '穿越机、360°环拍、希区柯克变焦与摇臂运镜轨迹',
+        sora_feat2: '35mm 变形宽银幕、IMAX 70mm 与 F/1.4 大光圈电影光学',
+        sora_feat3: '时间连续性防崩坏负向约束 (杜绝多头多肢与瞬移)',
+        sora_pillar: '维度: <span class="text-purple-600 dark:text-purple-400 font-medium">视频 · 时空 Latent 运动控制</span>',
+        sora_btn: '启动 Sora 工坊 →'
       }
     };
 
@@ -1183,6 +1277,8 @@
         window.location.href = 'https://deepseek.pacebowl.com/';
       } else if (/reddit|growth|subreddit|automod|红迪|引流|发帖/.test(q)) {
         window.location.href = 'https://reddit.pacebowl.com/';
+      } else if (/sora|video|motion|cinematic|film|视频|运镜|镜头|摄像/.test(q)) {
+        window.location.href = 'https://sora.pacebowl.com/';
       } else if (/game|amie|h5|play|摸鱼|游戏/.test(q)) {
         window.location.href = 'https://amielove.me/';
       } else if (/bead|pixel|perler|拼豆|图纸/.test(q)) {
