@@ -116,6 +116,14 @@
             "applicationCategory": "BusinessApplication",
             "operatingSystem": "All",
             "description": "Zero-cookie, privacy-first AI search referral tracker and first-touch Stripe revenue conversion attribution platform for ChatGPT, Perplexity, and Claude."
+          },
+          {
+            "@type": "WebApplication",
+            "name": "MoE Active-Params VRAM & Hardware Estimator",
+            "url": "https://moe.pacebowl.com/",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "All",
+            "description": "True VRAM requirements, KV cache scaling, and cluster topology calculator for Mixture-of-Experts (MoE) LLMs including Beam-501B and Le Chonk."
           }
         ]
       }
@@ -257,6 +265,13 @@
                 <div class="text-[10px] text-slate-500 dark:text-slate-400 truncate" data-i18n="sora_sub">Cinematic Camera Motion & Optics</div>
               </div>
             </a>
+            <a href="https://moe.pacebowl.com" class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/80 text-xs text-slate-700 dark:text-slate-200 transition mt-1">
+              <span class="w-7 h-7 rounded-lg bg-gradient-to-tr from-emerald-500 to-teal-600 flex items-center justify-center text-[10px] font-bold text-white shadow-sm flex-shrink-0">MoE</span>
+              <div class="min-w-0">
+                <div class="font-bold text-slate-900 dark:text-white truncate" data-i18n="moe_name">MoE VRAM Estimator</div>
+                <div class="text-[10px] text-slate-500 dark:text-slate-400 truncate" data-i18n="moe_sub">Beam 501B & Le Chonk VRAM Calc</div>
+              </div>
+            </a>
           </div>
         </div>
 
@@ -364,6 +379,8 @@
         <button type="button" onclick="quickDispatch('AI breaking news')" class="hover:text-sky-500 dark:hover:text-sky-400 transition underline underline-offset-2">"AI breaking news"</button>
         <span>•</span>
         <button type="button" onclick="quickDispatch('GEO AI attribution')" class="hover:text-sky-500 dark:hover:text-sky-400 transition underline underline-offset-2">"GEO attribution"</button>
+        <span>•</span>
+        <button type="button" onclick="quickDispatch('MoE VRAM calculator Beam Le Chonk')" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition underline underline-offset-2">"MoE VRAM calc"</button>
       </div>
     </div>
   </section>
@@ -709,6 +726,51 @@
         </div>
       </div>
 
+      <!-- Tool 8: MoE VRAM & Hardware Estimator -->
+      <div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-xl dark:shadow-none hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 text-xl font-bold">
+              ⚡
+            </div>
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-mono font-medium bg-emerald-100 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/30">
+              moe.pacebowl.com
+            </span>
+          </div>
+
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition" data-i18n="moe_card_title">
+            MoE Active-Params VRAM & Hardware Estimator
+          </h3>
+          <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed mb-6" data-i18n="moe_card_desc">
+            Calculate true physical memory requirements, KV cache scaling, and minimum GPU clustering for Mixture-of-Experts (MoE) LLMs. Features Beam-501B-A23B, Mistral Large 4 (Le Chonk), DeepSeek-V3, and vLLM launch commands.
+          </p>
+
+          <ul class="space-y-2 mb-6 text-xs text-slate-600 dark:text-slate-400">
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              <span data-i18n="moe_feat1">Active vs Total parameter physical residency with FlashAttention-3 & MLA</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              <span data-i18n="moe_feat2">1M Context KV cache explosion & FP8 precision calculation</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              <span data-i18n="moe_feat3">Production vLLM & SGLang launch commands with cluster topology</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="pt-6 border-t border-slate-100 dark:border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="text-xs text-slate-500" data-i18n="moe_pillar">
+            Pillar: <span class="text-emerald-600 dark:text-emerald-400 font-medium">Infrastructure · MoE Cluster & VRAM Physics</span>
+          </div>
+          <a href="https://moe.pacebowl.com/" onclick="window.geotrace && window.geotrace.track('launched_tool', { tool: 'moe' })" class="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold shadow-md shadow-emerald-600/20 transition" data-i18n="moe_btn">
+            Launch MoE Estimator →
+          </a>
+        </div>
+      </div>
+
     </div>
 
     <!-- Future Incubator Teaser -->
@@ -936,6 +998,7 @@
         <a href="https://deepseek.pacebowl.com" class="hover:text-blue-600 dark:hover:text-blue-400 transition font-medium" data-i18n="footer_deepseek">DeepSeek Studio</a>
         <a href="https://reddit.pacebowl.com" class="hover:text-orange-600 dark:hover:text-orange-400 transition font-medium" data-i18n="footer_reddit">Reddit Studio</a>
         <a href="https://sora.pacebowl.com" class="hover:text-purple-600 dark:hover:text-purple-400 transition font-medium" data-i18n="footer_sora">Sora Studio</a>
+        <a href="https://moe.pacebowl.com" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition font-medium" data-i18n="footer_moe">⚡ MoE VRAM Studio</a>
         <a href="/llms.txt" class="hover:text-slate-900 dark:hover:text-slate-200 transition">llms.txt</a>
         <a href="/sitemap.xml" class="hover:text-slate-900 dark:hover:text-slate-200 transition">Sitemap</a>
         <a href="https://buymeacoffee.com/pacebowl" target="_blank" rel="noopener noreferrer" data-umami-event="footer-sponsor-coffee" class="text-amber-600 dark:text-amber-400 hover:underline flex items-center gap-1 font-medium">☕ <span data-i18n="footer_coffee">Buy me a coffee</span></a>
@@ -1092,7 +1155,17 @@
         gr_citation: 'Audited under Chrome V8 Sandbox, Node 20 LTS & Cloudflare Edge Protocols.',
         gr_report: 'File Technical Correction Ticket ↗',
         footer_entity: 'PaceBowl Architecture Labs',
-        footer_correction: 'Technical Corrections ↗'
+        footer_correction: 'Technical Corrections ↗',
+        moe_name: 'MoE VRAM Estimator',
+        moe_sub: 'Beam 501B & Le Chonk VRAM Calc',
+        moe_card_title: 'MoE Active-Params VRAM & Hardware Estimator',
+        moe_card_desc: 'Calculate true physical memory requirements, KV cache scaling, and minimum GPU clustering for Mixture-of-Experts (MoE) LLMs. Features Beam-501B-A23B, Mistral Large 4 (Le Chonk), DeepSeek-V3, and vLLM launch commands.',
+        moe_feat1: 'Active vs Total parameter physical residency with FlashAttention-3 & MLA',
+        moe_feat2: '1M Context KV cache explosion & FP8 precision calculation',
+        moe_feat3: 'Production vLLM & SGLang launch commands with cluster topology',
+        moe_pillar: 'Pillar: <span class="text-emerald-600 dark:text-emerald-400 font-medium">Infrastructure · MoE Cluster & VRAM Physics</span>',
+        moe_btn: 'Launch MoE Estimator →',
+        footer_moe: '⚡ MoE VRAM Studio'
       },
       zh: {
         nav_status: '所有系统正常运行',
@@ -1236,7 +1309,17 @@
         gr_citation: '遵循 Chrome V8 内存沙箱、Node 20 LTS 与 Cloudflare Edge 边缘协议审计。',
         gr_report: '提交技术勘误工单 ↗',
         footer_entity: 'PaceBowl 架构实验室',
-        footer_correction: '技术勘误通道 ↗'
+        footer_correction: '技术勘误通道 ↗',
+        moe_name: 'MoE 显存与部署规格测算器',
+        moe_sub: 'Beam 501B 与 Le Chonk 显存推演',
+        moe_card_title: 'MoE 激活参数与集群显存测算器',
+        moe_card_desc: '激活参数决定每步计算 FLOPs，但总参数决定物理显存常驻底线。毫秒级推演物理权重、100万长上下文 KV Cache 膨胀与最低 GPU 集群拓扑。包含 Beam-501B、Le Chonk 与 DeepSeek-V3 预设。',
+        moe_feat1: '激活参数与常驻显存物理分离推演（校验 FlashAttention-3 与 MLA）',
+        moe_feat2: '100 万长上下文 KV Cache 膨胀与 FP8 显存测算',
+        moe_feat3: '生产级 vLLM 与 SGLang 启动参数生成与集群拓扑推荐',
+        moe_pillar: '支柱定位: <span class="text-emerald-600 dark:text-emerald-400 font-medium">基础设施层 · MoE 集群拓扑与物理显存</span>',
+        moe_btn: '启动 MoE 测算器 →',
+        footer_moe: '⚡ MoE 显存工坊'
       }
     };
 
@@ -1379,6 +1462,8 @@
         window.location.href = 'https://reddit.pacebowl.com/';
       } else if (/sora|video|motion|cinematic|film|视频|运镜|镜头|摄像/.test(q)) {
         window.location.href = 'https://sora.pacebowl.com/';
+      } else if (/moe|vram|gpu|beam|chonk|mixtral|h100|a100|显存|算力|专家|拓扑|集群/.test(q)) {
+        window.location.href = 'https://moe.pacebowl.com/';
       } else if (/game|amie|h5|play|摸鱼|游戏/.test(q)) {
         window.location.href = 'https://amielove.me/';
       } else if (/bead|pixel|perler|拼豆|图纸/.test(q)) {
