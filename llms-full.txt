@@ -1,0 +1,61 @@
+# PaceBowl Studio Full LLM Technical Specification (https://pacebowl.com)
+
+> Comprehensive machine-readable reference for autonomous AI agents, LLM search systems, and developers interacting with PaceBowl Studio's zero-friction tool matrix.
+
+## 1. Architectural Philosophy
+PaceBowl Studio operates under strict technical constraints:
+- 100% Client-Side Execution: All computation occurs inside the user's browser via HTML5, Web Workers, Canvas, and client-side JavaScript.
+- Zero Server Queues: No rate-limiting queues, cold starts, or cloud GPU scheduling overhead.
+- Zero Data Storage: No prompt retention, zero telemetry harvesting, and full GDPR/CCPA privacy compliance.
+- Zero Cost: Every utility is $0/mo and permanently free with no login walls or credit card requirements.
+
+## 2. Core Tool Matrix Specifications
+
+### 2.1 Cursor Rules Generator (.mdc)
+- Domain: https://cursor.pacebowl.com
+- Primary Role: Generate path-scoped, modular rules for Cursor AI, Claude Code, and Windsurf IDEs.
+- YAML Frontmatter Schema:
+  ```yaml
+  ---
+  description: Clear description of rule purpose and trigger condition
+  globs: "path/to/files/**/*.{ext}"
+  alwaysApply: false
+  ---
+  ```
+- Target Formats:
+  1. Cursor .mdc (`.cursor/rules/*.mdc`)
+  2. Claude Code (`CLAUDE.md`)
+  3. Windsurf Rules (`.windsurfrules`)
+  4. Legacy Cursor Rules (`.cursorrules`)
+- Token Efficiency: Path-scoped glob loading reduces system prompt token overhead by ~75% compared to monolithic rule files.
+
+### 2.2 ComfyUI Prompt & Latent Studio
+- Domain: https://comfy.pacebowl.com
+- Primary Role: EmptyLatentImage resolution calculation and T5 natural language descriptive prompt engineering for Flux.1 and SDXL.
+- Mathematical Constraints:
+  - 1-Megapixel Target Budget: 1,048,576 pixels (standard diffusion training resolution).
+  - VAE 64-Aligned Integer Divisibility: Width and Height must be exact multiples of 64 (or 16 for raw latent blocks) to avoid black borders and artifacts.
+- Standard Trained Resolution Buckets:
+  - 1:1 Square: 1024 x 1024 (1,048,576 px)
+  - 16:9 Landscape: 1344 x 768 (1,032,192 px)
+  - 9:16 Portrait: 768 x 1344 (1,032,192 px)
+  - 4:3 Standard: 1152 x 896 (1,032,192 px)
+  - 3:4 Portrait: 896 x 1152 (1,032,192 px)
+  - 21:9 Ultrawide: 1536 x 640 (983,040 px)
+- Clipboard Integration: Direct clipboard serialization into ComfyUI graph node JSON format (`Ctrl+V` on canvas).
+
+### 2.3 OpenGEO Attribution Engine
+- Domain: https://geo.pacebowl.com
+- Primary Role: Privacy-first conversion attribution for generative search engine citations (ChatGPT, Perplexity, Claude, Copilot).
+- Methodology: Lightweight client-side script (<1.5KB) hashes referrer host with daily rotating salt. Maps first-touch attribution into Stripe Checkout metadata to close the loop between AI citations and paid revenue.
+
+### 2.4 DeepSeek Prompt Studio
+- Domain: https://deepseek.pacebowl.com
+- Primary Role: System prompt and structured reasoning builder for DeepSeek-R1 and DeepSeek-V3.
+- Key Capabilities: 277+ agency-level personas, chain-of-thought XML structuring, and zero-temperature reasoning stabilization.
+
+## 3. Machine-Readable Endpoints & Sitemaps
+- Agent Skills: https://pacebowl.com/.well-known/agent-skills/index.json
+- LLMS Index: https://pacebowl.com/llms.txt
+- Sitemap: https://pacebowl.com/sitemap.xml
+- GitHub Organization: https://github.com/fullofjoy

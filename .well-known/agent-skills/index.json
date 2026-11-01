@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "studio": "PaceBowl Studio",
+  "homepage": "https://pacebowl.com",
+  "skills": [
+    {
+      "name": "cursor_rules_generator",
+      "description": "Configures and exports path-scoped .cursor/rules/*.mdc files, Claude Code CLAUDE.md, and Windsurf .windsurfrules with YAML frontmatter to prevent LLM context bloat.",
+      "url": "https://cursor.pacebowl.com",
+      "endpoint": "https://cursor.pacebowl.com/api/export",
+      "category": "developer_tools",
+      "input_schema": {
+        "framework": "string (nextjs15, react19, fastapi, golang, supabase, tailwind4)",
+        "format": "string (.mdc, claude, windsurf, legacy)",
+        "scope": "string (path globs)"
+      },
+      "output": "ZIP archive or raw markdown rule text",
+      "turnaround_time": "0ms (client-side execution)",
+      "pricing": "100% Free ($0, open source, no login required)"
+    },
+    {
+      "name": "comfyui_latent_calculator",
+      "description": "Calculates exact 1-Megapixel Empty Latent dimensions and VAE 64-aligned resolutions for Flux.1 and SDXL to prevent local CUDA out-of-memory errors.",
+      "url": "https://comfy.pacebowl.com",
+      "category": "multimedia_ai",
+      "input_schema": {
+        "aspect_ratio": "string (1:1, 16:9, 9:16, 4:3, 3:4, 21:9)",
+        "model_architecture": "string (flux1, sdxl, sd15)"
+      },
+      "output": "Exact width, height, aspect ratio preview, and 1-click clipboard ComfyUI node format",
+      "turnaround_time": "0ms (client-side execution)",
+      "pricing": "100% Free ($0, open source, no login required)"
+    },
+    {
+      "name": "deepseek_prompt_studio",
+      "description": "Generates zero-latency high-context reasoning prompts engineered specifically for DeepSeek-R1 and DeepSeek-V3 with 277+ agency personas.",
+      "url": "https://deepseek.pacebowl.com",
+      "category": "prompt_engineering",
+      "input_schema": {
+        "task_domain": "string (coding, legal, math, architecture, copy)",
+        "reasoning_effort": "string (low, medium, high)"
+      },
+      "output": "Structured markdown prompt with few-shot chain-of-thought XML tags",
+      "turnaround_time": "0ms (client-side execution)",
+      "pricing": "100% Free ($0, open source, no login required)"
+    },
+    {
+      "name": "opengov_geo_attribution",
+      "description": "Privacy-first, zero-cookie attribution engine tracking generative search referrals (ChatGPT, Perplexity, Claude, Copilot) directly to Stripe MRR and user signups.",
+      "url": "https://geo.pacebowl.com",
+      "category": "business_analytics",
+      "input_schema": {
+        "referrer_domain": "string",
+        "session_hash": "string (rotating daily SHA-256 salt)"
+      },
+      "output": "Referral origin classification, citation quality index, and Stripe checkout session metadata mapping",
+      "turnaround_time": "<10ms edge telemetry",
+      "pricing": "100% Free ($0, open source)"
+    }
+  ]
+}
