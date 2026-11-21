@@ -182,10 +182,34 @@
     downloadBlob(blob, spec.filename || 'PaceBowl-Feeding-Chart.pdf');
     try {
       if (window.umami && typeof window.umami.track === 'function') {
-        window.umami.track('pacebowl_pdf_downloaded', { title: spec.title || 'feeding_chart' });
+        const pathParts = (window.location && window.location.pathname ? window.location.pathname : '').split('/').filter(Boolean);
+        const tool = pathParts[0] === 'tools' && pathParts[1] ? pathParts[1] : 'hub';
+        window.umami.track('pacebowl_pdf_downloaded', {
+          tool,
+          filename: spec.filename || 'PaceBowl-Feeding-Chart.pdf',
+        });
       }
     } catch (e) {}
   }
+
+  // Track first real calculator interaction per tool per page load (for Calc -> PDF funnel rate)
+  try {
+    let engagedTracked = false;
+    const trackEngagement = function (ev) {
+      if (engagedTracked) return;
+      if (!ev || !ev.target || !ev.target.closest || !ev.target.closest('.pb-calc-grid')) return;
+      engagedTracked = true;
+      if (window.umami && typeof window.umami.track === 'function') {
+        const pathParts = (window.location && window.location.pathname ? window.location.pathname : '').split('/').filter(Boolean);
+        const tool = pathParts[0] === 'tools' && pathParts[1] ? pathParts[1] : 'hub';
+        window.umami.track('pacebowl_calculator_used', { tool });
+      }
+    };
+    if (typeof document !== 'undefined' && document.addEventListener) {
+      document.addEventListener('change', trackEngagement, true);
+      document.addEventListener('input', trackEngagement, true);
+    }
+  } catch (e) {}
 
   window.PaceBowlPdf = { downloadFeedingChartPdf };
 })();
