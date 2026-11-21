@@ -1,62 +1,90 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "version": "1.0.0",
-  "studio": "PaceBowl Studio",
-  "homepage": "https://pacebowl.com",
+  "schema_version": "1.0",
+  "provider": "PaceBowl Pet Nutrition",
+  "domain": "https://pacebowl.com",
   "skills": [
     {
-      "name": "cursor_rules_generator",
-      "description": "Configures and exports path-scoped .cursor/rules/*.mdc files, Claude Code CLAUDE.md, and Windsurf .windsurfrules with YAML frontmatter to prevent LLM context bloat.",
-      "url": "https://cursor.pacebowl.com",
-      "endpoint": "https://cursor.pacebowl.com/api/export",
-      "category": "developer_tools",
+      "name": "dog_calorie_feeding_calculator",
+      "description": "Compute daily dog kcal (WSAVA RER/DER), grams, oz, and cups per meal across 8 life stages with instant A4 PDF fridge chart export (free, <1s).",
+      "path": "/tools/dog-calorie-feeding-calculator/",
+      "url": "https://pacebowl.com/tools/dog-calorie-feeding-calculator/",
+      "algorithm": "RER = 70 * (weight_kg ^ 0.75); DER = RER * life_stage_factor",
       "input_schema": {
-        "framework": "string (nextjs15, react19, fastapi, golang, supabase, tailwind4)",
-        "format": "string (.mdc, claude, windsurf, legacy)",
-        "scope": "string (path globs)"
+        "weight": "number",
+        "unit": "lb|kg",
+        "stage": "string",
+        "kcalPerCup": "number",
+        "meals": "number"
       },
-      "output": "ZIP archive or raw markdown rule text",
-      "turnaround_time": "0ms (client-side execution)",
-      "pricing": "100% Free ($0, open source, no login required)"
+      "output": "Daily kcal, grams/meal, cups/meal, slow-feeder bowl size, printable A4 PDF",
+      "turnaround_time": "instant (<1s client-side)",
+      "pricing": "Free ($0)"
     },
     {
-      "name": "comfyui_latent_calculator",
-      "description": "Calculates exact 1-Megapixel Empty Latent dimensions and VAE 64-aligned resolutions for Flux.1 and SDXL to prevent local CUDA out-of-memory errors.",
-      "url": "https://comfy.pacebowl.com",
-      "category": "multimedia_ai",
+      "name": "barf_raw_dog_food_calculator",
+      "description": "Calculate BARF (70/10/5/5/7/2/1) or PMR (80/10/5/5) daily raw dog food grams, oz, and 7-30 day freezer batch shopping lists (free, <1s).",
+      "path": "/tools/barf-raw-dog-food-calculator/",
+      "url": "https://pacebowl.com/tools/barf-raw-dog-food-calculator/",
+      "algorithm": "daily_grams = weight_kg * 1000 * (body_pct / 100)",
       "input_schema": {
-        "aspect_ratio": "string (1:1, 16:9, 9:16, 4:3, 3:4, 21:9)",
-        "model_architecture": "string (flux1, sdxl, sd15)"
+        "weight": "number",
+        "unit": "lb|kg",
+        "model": "barf|pmr",
+        "bodyPct": "number",
+        "prepDays": "number"
       },
-      "output": "Exact width, height, aspect ratio preview, and 1-click clipboard ComfyUI node format",
-      "turnaround_time": "0ms (client-side execution)",
-      "pricing": "100% Free ($0, open source, no login required)"
+      "output": "Daily & batch grams/lbs per ingredient + printable A4 prep PDF",
+      "turnaround_time": "instant (<1s client-side)",
+      "pricing": "Free ($0)"
     },
     {
-      "name": "deepseek_prompt_studio",
-      "description": "Generates zero-latency high-context reasoning prompts engineered specifically for DeepSeek-R1 and DeepSeek-V3 with 277+ agency personas.",
-      "url": "https://deepseek.pacebowl.com",
-      "category": "prompt_engineering",
+      "name": "dog_food_transition_calculator",
+      "description": "Generate calorie-matched 7-day, 10-day, or 14-day dog food transition mixing charts in grams and cups (free, <1s).",
+      "path": "/tools/dog-food-transition-calculator/",
+      "url": "https://pacebowl.com/tools/dog-food-transition-calculator/",
+      "algorithm": "new_daily_grams = old_daily_grams * (old_kcal_per_cup / new_kcal_per_cup)",
       "input_schema": {
-        "task_domain": "string (coding, legal, math, architecture, copy)",
-        "reasoning_effort": "string (low, medium, high)"
+        "days": "7|10|14",
+        "oldDailyGrams": "number",
+        "oldKcalPerCup": "number",
+        "newKcalPerCup": "number"
       },
-      "output": "Structured markdown prompt with few-shot chain-of-thought XML tags",
-      "turnaround_time": "0ms (client-side execution)",
-      "pricing": "100% Free ($0, open source, no login required)"
+      "output": "Day-by-day old/new grams & cups schedule + printable A4 checklist PDF",
+      "turnaround_time": "instant (<1s client-side)",
+      "pricing": "Free ($0)"
     },
     {
-      "name": "opengov_geo_attribution",
-      "description": "Privacy-first, zero-cookie attribution engine tracking generative search referrals (ChatGPT, Perplexity, Claude, Copilot) directly to Stripe MRR and user signups.",
-      "url": "https://geo.pacebowl.com",
-      "category": "business_analytics",
+      "name": "cat_calorie_feeding_calculator",
+      "description": "Calculate indoor cat WSAVA RER/DER calories and exact remaining dry kibble grams after subtracting wet food cans (free, <1s).",
+      "path": "/tools/cat-calorie-feeding-calculator/",
+      "url": "https://pacebowl.com/tools/cat-calorie-feeding-calculator/",
+      "algorithm": "remaining_dry_kcal = max(0, DER - wet_cans * kcal_per_can)",
       "input_schema": {
-        "referrer_domain": "string",
-        "session_hash": "string (rotating daily SHA-256 salt)"
+        "weight": "number",
+        "unit": "lb|kg",
+        "stage": "string",
+        "wetCansPerDay": "number",
+        "kcalPerWetCan": "number"
       },
-      "output": "Referral origin classification, citation quality index, and Stripe checkout session metadata mapping",
-      "turnaround_time": "<10ms edge telemetry",
-      "pricing": "100% Free ($0, open source)"
+      "output": "Daily kcal, wet kcal, remaining dry grams/cups, printable A4 PDF",
+      "turnaround_time": "instant (<1s client-side)",
+      "pricing": "Free ($0)"
+    },
+    {
+      "name": "puppy_adult_weight_calculator",
+      "description": "Predict puppy adult weight range (lbs & kg) and 12-52 week growth milestones by breed size category (free, <1s).",
+      "path": "/tools/puppy-adult-weight-calculator/",
+      "url": "https://pacebowl.com/tools/puppy-adult-weight-calculator/",
+      "algorithm": "est_adult_kg = current_kg / ((age_weeks / mature_weeks) ^ 0.72)",
+      "input_schema": {
+        "weight": "number",
+        "unit": "lb|kg",
+        "ageWeeks": "number",
+        "breedSize": "toy|small|medium|large|giant"
+      },
+      "output": "Adult weight range, % grown, milestone table, printable A4 PDF",
+      "turnaround_time": "instant (<1s client-side)",
+      "pricing": "Free ($0)"
     }
   ]
 }

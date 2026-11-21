@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat Calorie & Wet/Dry Food Calculator — Daily Grams</title>
+  <meta name="description" content="Free cat calorie & mixed wet/dry feeding calculator. Subtract daily wet cans from WSAVA DER calories to find exact dry kibble grams for indoor cats.">
+  <meta name="keywords" content="cat calorie calculator, how much wet and dry food to feed a cat, mixed feeding cat calculator, kitten calorie calculator">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://pacebowl.com/tools/cat-calorie-feeding-calculator/">
+  <link rel="alternate" type="application/json" href="https://pacebowl.com/.well-known/agent-skills/index.json" title="Agent Skills Index">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1B4332">
+  <meta name="google-site-verification" content="p_5pqOozjilh_Db2M0Owy5AQCZHdlvAVFpxQ-Asdxcs">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PaceBowl Pet Nutrition">
+  <meta property="og:title" content="Cat Calorie & Wet/Dry Food Calculator — Daily Grams">
+  <meta property="og:description" content="Free cat calorie & mixed wet/dry feeding calculator. Subtract daily wet cans from WSAVA DER calories to find exact dry kibble grams for indoor cats.">
+  <meta property="og:url" content="https://pacebowl.com/tools/cat-calorie-feeding-calculator/">
+  <meta property="og:image" content="https://pacebowl.com/assets/og-pacebowl.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cat Calorie & Wet/Dry Food Calculator — Daily Grams">
+  <meta name="twitter:description" content="Free cat calorie & mixed wet/dry feeding calculator. Subtract daily wet cans from WSAVA DER calories to find exact dry kibble grams for indoor cats.">
+  <meta name="twitter:image" content="https://pacebowl.com/assets/og-pacebowl.png">
+
+  <link rel="stylesheet" href="/assets/css/pacebowl.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pacebowl.com/#organization",
+      "name": "PaceBowl Pet Nutrition",
+      "url": "https://pacebowl.com/",
+      "logo": "https://pacebowl.com/apple-touch-icon.png",
+      "description": "Free veterinary-standard dog and cat feeding, BARF raw diet, food transition, and puppy growth calculators with printable A4 fridge charts.",
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Q144",
+        "https://www.wikidata.org/wiki/Q146",
+        "https://www.wikidata.org/wiki/Q38404",
+        "https://www.wikidata.org/wiki/Q170201"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pacebowl.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cat Calorie & Wet/Dry Calculator",
+          "item": "https://pacebowl.com/tools/cat-calorie-feeding-calculator/"
+        }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "name": "PaceBowl Cat Calorie & Wet/Dry Mixed Feeding Calculator",
+      "url": "https://pacebowl.com/tools/cat-calorie-feeding-calculator/",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "All",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many calories does a 10 lb indoor cat need per day?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A healthy 10 lb (4.5 kg) neutered indoor cat has an RER of 218 kcal and needs about 262 kcal/day (1.2x RER). If fed one 3 oz wet can (85 kcal), they need 177 kcal of dry kibble (~47 g or 0.44 cup) per day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I mix wet and dry food for my cat without overfeeding?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "First calculate your cat's total daily calorie need (DER), subtract the exact calories from all wet food cans/pouches fed each day, and measure only the remaining calories in dry kibble using a digital gram scale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many calories should an overweight cat eat to lose weight?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Veterinarians typically start indoor cat weight loss at 0.8x RER based on ideal target weight (usually 170–210 kcal/day for a 10 lb ideal cat). Never fast a cat—rapid starvation risks hepatic lipidosis."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <script>
+  (function () {
+    try {
+      var p = new URLSearchParams(window.location.search).get('umami_ignore');
+      if (p === '1') localStorage.setItem('umami.disabled', '1');
+      else if (p === '0') localStorage.removeItem('umami.disabled');
+    } catch (e) {}
+    window.__matrixUmamiBeforeSend = function (type, payload) {
+      try {
+        if (localStorage.getItem('umami.disabled') === '1') return false;
+        if (navigator.webdriver) return false;
+        if (/HeadlessChrome|Playwright|Puppeteer/i.test(navigator.userAgent || '')) return false;
+        var h = window.location.hostname || '';
+        if (h === 'localhost' || h === '127.0.0.1' || /\.(pages\.dev|workers\.dev|instabox\.tech)$/i.test(h)) return false;
+      } catch (e) {}
+      return payload;
+    };
+  })();
+  </script>
+  <script defer src="https://umami-ruby-alpha-96.vercel.app/script.js" data-website-id="260de255-2ac2-4a9b-a17d-e4aec78f9ab1" data-domains="pacebowl.com,www.pacebowl.com" data-before-send="__matrixUmamiBeforeSend"></script>
+  <script defer src="/assets/js/pacebowl-math.js"></script>
+  <script defer src="/assets/js/pacebowl-pdf.js"></script>
+  <script defer src="/assets/js/pacebowl-feedback.js"></script>
+</head>
+<body>
+  <header class="pb-header">
+    <div class="pb-container pb-nav-inner">
+      <a href="/" class="pb-logo">
+        <span>🐾 PaceBowl</span>
+        <span class="pb-logo-badge">Pet Nutrition</span>
+      </a>
+      <nav class="pb-nav-links" aria-label="Primary Pet Calculators">
+        <a href="/tools/dog-calorie-feeding-calculator/" class="">Dog Calories</a>
+        <a href="/tools/barf-raw-dog-food-calculator/" class="">BARF Raw Diet</a>
+        <a href="/tools/dog-food-transition-calculator/" class="">7-Day Transition</a>
+        <a href="/tools/cat-calorie-feeding-calculator/" class="active">Cat Wet & Dry</a>
+        <a href="/tools/puppy-adult-weight-calculator/" class="">Puppy Weight</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pb-container">
+
+    <nav class="pb-crumb" aria-label="Breadcrumb"><a href="/">Home</a> <span>/</span> <span>Cat Calorie &amp; Wet/Dry Calculator</span></nav>
+    <section class="pb-hero">
+      <div class="pb-pill">🐈 Indoor Cat Wet + Dry Mixed Feeding Engine</div>
+      <h1>Cat Calorie &amp; Wet/Dry Food Calculator (Daily Grams)</h1>
+      <p>Avoid indoor cat weight gain. Enter your cat's weight and daily wet food cans to calculate exact remaining dry kibble grams and cups—with a printable fridge chart.</p>
+    </section>
+
+    <section class="pb-calc-grid">
+      <div class="pb-card">
+        <div class="pb-field">
+          <label for="cat-weight">Cat's Weight (Ideal Target Weight for Weight Loss)</label>
+          <div class="pb-input-row">
+            <input id="cat-weight" type="number" min="1" max="35" step="0.5" value="10">
+            <select id="cat-unit" style="max-width:100px;"><option value="lb" selected>lbs</option><option value="kg">kg</option></select>
+          </div>
+        </div>
+        <div class="pb-field">
+          <label for="cat-stage">Cat Life Stage &amp; Activity</label>
+          <select id="cat-stage">
+            <option value="indoor_neutered" selected>Indoor Neutered / Spayed Adult (1.2× RER)</option>
+            <option value="intact_adult">Intact Adult Cat (1.4× RER)</option>
+            <option value="weight_loss">Weight Loss / Overweight (0.8× RER)</option>
+            <option value="active_outdoor">Active / Outdoor Cat (1.6× RER)</option>
+            <option value="kitten">Growing Kitten Under 12 Months (2.5× RER)</option>
+            <option value="senior">Senior Cat 10+ Years (1.1× RER)</option>
+          </select>
+        </div>
+        <div class="pb-field">
+          <label for="cat-wet-cans">Wet Food Cans / Pouches Per Day &amp; kcal/Can</label>
+          <div class="pb-input-row">
+            <input id="cat-wet-cans" type="number" min="0" max="6" step="0.5" value="1" aria-label="Wet cans per day">
+            <input id="cat-wet-kcal" type="number" min="30" max="250" value="85" aria-label="kcal per wet can">
+          </div>
+          <div class="pb-hint">Standard 3 oz (85 g) cat food can averages 75–95 kcal. Set cans to 0 for dry-only.</div>
+        </div>
+        <div class="pb-field">
+          <label for="cat-dry-cup">Dry Kibble Density (kcal/cup &amp; kcal/kg)</label>
+          <div class="pb-input-row">
+            <input id="cat-dry-cup" type="number" min="200" max="700" value="400" aria-label="Dry kcal per cup">
+            <input id="cat-dry-kg" type="number" min="2500" max="5500" value="3800" aria-label="Dry kcal per kg">
+          </div>
+        </div>
+      </div>
+
+      <div class="pb-card pb-card-accent">
+        <div class="pb-kpi-grid">
+          <div class="pb-kpi">
+            <div class="pb-kpi-label">Daily Calorie Need</div>
+            <div class="pb-kpi-val" id="cat-der">262 kcal</div>
+            <div class="pb-kpi-sub" id="cat-rer">Base RER: 218 kcal/day</div>
+          </div>
+          <div class="pb-kpi">
+            <div class="pb-kpi-label">Wet Food Calories</div>
+            <div class="pb-kpi-val" id="cat-wet-out">85 kcal</div>
+            <div class="pb-kpi-sub" id="cat-rem-out">177 kcal left for dry kibble</div>
+          </div>
+          <div class="pb-kpi">
+            <div class="pb-kpi-label">Dry Kibble (Grams/Day)</div>
+            <div class="pb-kpi-val" id="cat-dry-g">47 g</div>
+            <div class="pb-kpi-sub">Weigh on digital gram scale</div>
+          </div>
+          <div class="pb-kpi">
+            <div class="pb-kpi-label">Dry Kibble (Cups/Day)</div>
+            <div class="pb-kpi-val" id="cat-dry-c">0.44 cup</div>
+            <div class="pb-kpi-sub">Split into 2–3 small meals</div>
+          </div>
+        </div>
+        <div class="pb-notice" id="cat-warn" style="display:none;"></div>
+        <button type="button" id="btn-cat-pdf" class="pb-btn pb-btn-primary" style="margin-top:14px;">📄 Download Printable A4 Cat Feeding Chart (PDF)</button>
+      </div>
+    </section>
+
+    <section class="pb-section">
+      <h2>How Many Calories &amp; Grams of Dry Food Does an Indoor Cat Need?</h2>
+      <div class="pb-card pb-table-wrap">
+        <table class="pb-table">
+          <thead><tr><th>Cat Weight</th><th>Base RER</th><th>Indoor Neutered (1.2×)</th><th>Weight Loss (0.8×)</th><th>Dry Grams After 1 Wet Can (85 kcal)</th></tr></thead>
+          <tbody>
+            <tr><td><strong>8 lb (3.6 kg)</strong></td><td>184 kcal</td><td>221 kcal/day</td><td>147 kcal/day</td><td>36 g dry kibble</td></tr>
+            <tr><td><strong>10 lb (4.5 kg)</strong></td><td>218 kcal</td><td>262 kcal/day</td><td>174 kcal/day</td><td>47 g dry kibble</td></tr>
+            <tr><td><strong>12 lb (5.4 kg)</strong></td><td>249 kcal</td><td>299 kcal/day</td><td>199 kcal/day</td><td>56 g dry kibble</td></tr>
+            <tr><td><strong>15 lb (6.8 kg)</strong></td><td>295 kcal</td><td>354 kcal/day</td><td>236 kcal/day</td><td>71 g dry kibble</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="pb-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="pb-card"><div class="pb-faq-item"><h3>How many calories does a 10 lb indoor cat need per day?</h3><p>A healthy 10 lb (4.5 kg) neutered indoor cat has an RER of 218 kcal and needs about 262 kcal/day (1.2x RER). If fed one 3 oz wet can (85 kcal), they need 177 kcal of dry kibble (~47 g or 0.44 cup) per day.</p></div><div class="pb-faq-item"><h3>How do I mix wet and dry food for my cat without overfeeding?</h3><p>First calculate your cat's total daily calorie need (DER), subtract the exact calories from all wet food cans/pouches fed each day, and measure only the remaining calories in dry kibble using a digital gram scale.</p></div><div class="pb-faq-item"><h3>How many calories should an overweight cat eat to lose weight?</h3><p>Veterinarians typically start indoor cat weight loss at 0.8x RER based on ideal target weight (usually 170–210 kcal/day for a 10 lb ideal cat). Never fast a cat—rapid starvation risks hepatic lipidosis.</p></div></div>
+    </section>
+    
+    <section class="pb-section" aria-label="More Pet Feeding Calculators">
+      <h2>Explore More PaceBowl Pet Nutrition Calculators</h2>
+      <div class="pb-tools-grid">
+        <a href="/tools/dog-calorie-feeding-calculator/" class="pb-tool-card">
+          <div>
+            <div style="font-size:24px;">🐕</div>
+            <h3>Dog Calorie & Feeding Calculator</h3>
+            <p>Calculate exact daily kcal, grams, and cups using WSAVA RER/DER formulas.</p>
+          </div>
+          <span class="pb-tool-cta">Open Calculator &rarr;</span>
+        </a>
+        <a href="/tools/barf-raw-dog-food-calculator/" class="pb-tool-card">
+          <div>
+            <div style="font-size:24px;">🥩</div>
+            <h3>BARF Raw Dog Food Calculator</h3>
+            <p>Split 70/10/5/5/7/2/1 BARF or 80/10/10 PMR raw meals into daily grams & batch lbs.</p>
+          </div>
+          <span class="pb-tool-cta">Open Calculator &rarr;</span>
+        </a>
+        <a href="/tools/dog-food-transition-calculator/" class="pb-tool-card">
+          <div>
+            <div style="font-size:24px;">🔄</div>
+            <h3>7-Day Dog Food Transition Chart</h3>
+            <p>Calorie-matched day-by-day old vs. new kibble mixing schedule to prevent upset stomach.</p>
+          </div>
+          <span class="pb-tool-cta">Open Calculator &rarr;</span>
+        </a>
+        <a href="/tools/puppy-adult-weight-calculator/" class="pb-tool-card">
+          <div>
+            <div style="font-size:24px;">🐶</div>
+            <h3>Puppy Adult Weight Predictor</h3>
+            <p>Estimate your puppy's full adult weight range and milestone growth chart by breed size.</p>
+          </div>
+          <span class="pb-tool-cta">Open Calculator &rarr;</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pb-footer">
+    <div class="pb-container pb-footer-inner">
+      <div>
+        <strong>PaceBowl Pet Nutrition Studio</strong> · Based on WSAVA &amp; NRC veterinary nutrition formulas. For educational use; consult your veterinarian for medical diets.
+      </div>
+      <div class="pb-footer-links">
+        <a href="/tools/dog-calorie-feeding-calculator/">Dog Calories</a>
+        <a href="/tools/barf-raw-dog-food-calculator/">BARF Raw</a>
+        <a href="/tools/dog-food-transition-calculator/">7-Day Transition</a>
+        <a href="/tools/cat-calorie-feeding-calculator/">Cat Wet &amp; Dry</a>
+        <a href="/tools/puppy-adult-weight-calculator/">Puppy Weight</a>
+        <a href="/llms.txt">llms.txt</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function(){
+      function run(){
+        if(!window.PaceBowlMath) return;
+        const r = window.PaceBowlMath.calcCatFeeding({
+          weight: document.getElementById('cat-weight').value,
+          unit: document.getElementById('cat-unit').value,
+          stage: document.getElementById('cat-stage').value,
+          wetCansPerDay: document.getElementById('cat-wet-cans').value,
+          kcalPerWetCan: document.getElementById('cat-wet-kcal').value,
+          dryKcalPerCup: document.getElementById('cat-dry-cup').value,
+          dryKcalPerKg: document.getElementById('cat-dry-kg').value,
+        });
+        document.getElementById('cat-der').textContent = r.der + ' kcal';
+        document.getElementById('cat-rer').textContent = 'Base RER: ' + r.rer + ' kcal/day (' + r.factor + 'x)';
+        document.getElementById('cat-wet-out').textContent = r.wetKcal + ' kcal';
+        document.getElementById('cat-rem-out').textContent = r.remainingDryKcal + ' kcal left for dry kibble';
+        document.getElementById('cat-dry-g').textContent = r.dryGramsPerDay + ' g';
+        document.getElementById('cat-dry-c').textContent = r.dryCupsPerDay + ' cups';
+        const w = document.getElementById('cat-warn');
+        if(r.overfedWarning){
+          w.style.display='block';
+          w.innerHTML='<strong>Heads up:</strong> Wet food alone (' + r.wetKcal + ' kcal) already exceeds your cat\'s daily target (' + r.der + ' kcal). Reduce wet cans or skip dry kibble.';
+        } else { w.style.display='none'; }
+        window.__lastCat = r;
+      }
+      ['cat-weight','cat-unit','cat-stage','cat-wet-cans','cat-wet-kcal','cat-dry-cup','cat-dry-kg'].forEach(id=>{
+        document.getElementById(id).addEventListener('input', run);
+        document.getElementById(id).addEventListener('change', run);
+      });
+      document.getElementById('btn-cat-pdf').addEventListener('click', function(){
+        const r = window.__lastCat;
+        if(!r || !window.PaceBowlPdf) return;
+        const days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+        window.PaceBowlPdf.downloadFeedingChartPdf({
+          title: 'Daily Cat Wet & Dry Feeding Chart (' + r.der + ' kcal/day)',
+          filename: 'PaceBowl-Cat-Feeding-Chart.pdf',
+          summaryRows: [
+            ['Cat Weight & Stage:', r.weightLb + ' lbs (' + r.weightKg + ' kg) | ' + r.stageLabel],
+            ['Daily Energy Target:', r.der + ' kcal/day (WSAVA RER ' + r.rer + ' x ' + r.factor + ')'],
+            ['Daily Wet Food:', r.wetCansPerDay + ' can(s)/day (' + r.wetKcal + ' kcal)'],
+            ['Remaining Dry Kibble:', r.dryGramsPerDay + ' g/day (' + r.dryCupsPerDay + ' cups | ' + r.remainingDryKcal + ' kcal)']
+          ],
+          tableTitle: 'WEEKLY CAT MEAL TRACKER',
+          tableHeaders: ['Day', 'Wet Food', 'Dry Kibble (g)', 'Dry Kibble (cups)', 'Fed'],
+          tableRows: days.map(d => [d, r.wetCansPerDay + ' can(s)', r.dryGramsPerDay + ' g', r.dryCupsPerDay + ' c', '']),
+          checkboxes: true,
+          notes: [
+            'Never fast an overweight cat; gradual weight loss (0.5%-1% per week) prevents hepatic lipidosis.',
+            'Keep treats under 10% of daily calories (' + Math.round(r.der*0.1) + ' kcal/day).',
+            'Use a wide, shallow whisker-friendly bowl or slow-feeder puzzle to curb scarf-and-barf.'
+          ]
+        });
+      });
+      window.addEventListener('DOMContentLoaded', run);
+      setTimeout(run, 120);
+    })();</script>
+</body>
+</html>

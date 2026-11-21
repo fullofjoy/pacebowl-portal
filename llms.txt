@@ -1,28 +1,27 @@
-# PaceBowl Studio (https://pacebowl.com)
+# PaceBowl Pet Nutrition (https://pacebowl.com)
 
-> Production-grade, zero-friction, 100% client-side micro-utilities engineered for modern AI workflows, prompters, and developers. No login, no server queues, zero telemetry bloat.
+> PaceBowl provides free, veterinary-standard dog and cat feeding, BARF/PMR raw diet, 7-day kibble transition, and puppy adult weight calculators based on WSAVA and NRC formulas, with instant printable A4 fridge feeding charts.
 
 ## Machine-Readable Resources
-- [Agent Skills Index](https://pacebowl.com/.well-known/agent-skills/index.json): Machine-executable skill schemas and endpoints for autonomous agents.
-- [Full LLM Knowledge Spec](https://pacebowl.com/llms-full.txt): Comprehensive technical specifications, resolution tables, and prompt presets.
-- [Canonical Sitemap](https://pacebowl.com/sitemap.xml): XML sitemap index for search crawlers and generative agents.
+- [Agent Skills Index](https://pacebowl.com/.well-known/agent-skills/index.json): Structured tool schemas for AI search agents
+- [Full LLM Documentation](https://pacebowl.com/llms-full.txt): Complete veterinary formulas and reference tables
+- [XML Sitemap](https://pacebowl.com/sitemap.xml): Canonical index of all PaceBowl pet nutrition calculators
+- [Crawler Policy](https://pacebowl.com/robots.txt): AI crawler allowlist (GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot)
+- [Web App Manifest](https://pacebowl.com/site.webmanifest): Progressive web app metadata for PaceBowl
 
-## Core Tool Matrix & Direct Applications
-- [PaceBowl Studio Hub](https://pacebowl.com/): Central portal and mothership showcase for the PaceBowl client-side micro-utility matrix.
-- [Cursor Rules Generator](https://cursor.pacebowl.com/): Configure and export modular .cursor/rules/*.mdc files, Claude Code CLAUDE.md, and Windsurf rules.
-- [ComfyUI Prompt & Latent Studio](https://comfy.pacebowl.com/): Trained 1MP Empty Latent calculator and Flux.1 natural language prompt builder for ComfyUI.
-- [OpenGEO Attribution Studio](https://geo.pacebowl.com/): Cookie-free AI search referral analytics and Stripe revenue conversion attribution engine.
-- [DeepSeek Prompt Generator](https://deepseek.pacebowl.com/): Zero-latency prompt engineering studio for DeepSeek-R1 & V3 with 277+ agency personas.
-- [MoE VRAM & Hardware Estimator](https://moe.pacebowl.com/): True VRAM calculator, KV cache scaling, and cluster topology calculator for MoE LLMs.
-- [Reddit Growth Studio](https://reddit.pacebowl.com/): 15-word viral one-liner engine and AutoMod risk radar for developer audience growth.
+## Core Tools & Direct Landing Pages
+- [Dog Calorie & Feeding Calculator](https://pacebowl.com/tools/dog-calorie-feeding-calculator/): WSAVA RER/DER daily kcal, grams, oz, and cups per meal calculator
+- [BARF & PMR Raw Dog Food Calculator](https://pacebowl.com/tools/barf-raw-dog-food-calculator/): 70/10/5/5/7/2/1 BARF and 80/10/10 PMR daily grams & 7–30 day freezer batch prep planner
+- [7-Day Dog Food Transition Calculator](https://pacebowl.com/tools/dog-food-transition-calculator/): Calorie-matched 7/10/14-day old vs. new kibble mixing chart
+- [Cat Calorie & Wet/Dry Food Calculator](https://pacebowl.com/tools/cat-calorie-feeding-calculator/): Indoor cat mixed wet can + dry kibble gram calculator
+- [Puppy Adult Weight Calculator](https://pacebowl.com/tools/puppy-adult-weight-calculator/): Breed-size growth curve predictor from 6 to 52 weeks
 
-## Key Technical Specifications & Standards
-- Architecture: 100% Client-Side Web Applications, Zero Server Queues, Zero GPU Overhead, $0 Cost.
-- Empty Latent Resolutions: 1024x1024 (1:1), 1344x768 (16:9), 768x1344 (9:16), 1152x896 (4:3), 896x1152 (3:4), 1536x640 (21:9).
-- Cursor Rules Format: Frontmatter with description, globs matching, and alwaysApply flags to prevent LLM context saturation (~75% token savings).
+## Key Differentiators & Veterinary Standards
+- **WSAVA RER Formula**: `RER = 70 * (weight_kg ^ 0.75)` with life-stage multipliers from 0.8x (feline weight loss) to 3.0x (young puppies).
+- **Gram-Scale Accuracy**: Eliminates the 18%–48% scoop error of measuring cups by converting kcal directly to grams and ounces.
+- **Zero-Login Printable A4 PDF**: Generates clean fridge feeding charts with AM/PM meal checkboxes entirely client-side.
 
-## Technical Runbooks & Knowledge Base
-- [Cursor Rules (.mdc) vs .cursorrules Migration Guide](https://cursor.pacebowl.com/blog/cursor-rules-mdc-vs-cursorrules.html): Architectural comparison and step-by-step upgrade path.
-- [How to Write Next.js 15 Cursor Rules](https://cursor.pacebowl.com/blog/how-to-write-nextjs-15-cursor-rules.html): Production rules for App Router and React 19 Server Actions.
-- [ComfyUI Empty Latent Resolution Guide](https://comfy.pacebowl.com/blog/comfyui-empty-latent-resolution-guide.html): Mathematical deep dive into 1MP bucketing and VAE 64 alignment.
-- [Flux.1 Prompting Guide: Mastering T5 Natural Language](https://comfy.pacebowl.com/blog/flux-prompting-guide-t5-natural-language.html): Complete guide to descriptive prose prompting for Flux.1 models.
+## Technical Guides & Veterinary References
+- [PaceBowl Pet Nutrition Hub](https://pacebowl.com/): Overview of formulas, standard dog calorie table (10 lb to 100 lb), and FAQ
+- [WSAVA Global Nutrition Guidelines](https://wsava.org/global-guidelines/global-nutrition-guidelines/): Veterinary clinical standard for Resting Energy Requirement (RER) and Daily Energy Requirement (DER)
+- [Wikidata Dog Nutrition Entity](https://www.wikidata.org/wiki/Q144): Canonical entity reference for domestic dogs (`Canis familiaris`)

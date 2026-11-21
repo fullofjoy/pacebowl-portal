@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BARF Raw Dog Food Calculator — 80/10/10 Grams & Oz</title>
+  <meta name="description" content="Free BARF (70/10/5/5/7/2/1) & PMR 80/10/10 raw dog food calculator. Compute exact daily grams, oz, and 14-day freezer batch prep shopping lists in PDF.">
+  <meta name="keywords" content="BARF raw dog food calculator, 80 10 10 raw dog food calculator, PMR raw feeding calculator, raw dog food grams per day">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://pacebowl.com/tools/barf-raw-dog-food-calculator/">
+  <link rel="alternate" type="application/json" href="https://pacebowl.com/.well-known/agent-skills/index.json" title="Agent Skills Index">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1B4332">
+  <meta name="google-site-verification" content="p_5pqOozjilh_Db2M0Owy5AQCZHdlvAVFpxQ-Asdxcs">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PaceBowl Pet Nutrition">
+  <meta property="og:title" content="BARF Raw Dog Food Calculator — 80/10/10 Grams & Oz">
+  <meta property="og:description" content="Free BARF (70/10/5/5/7/2/1) & PMR 80/10/10 raw dog food calculator. Compute exact daily grams, oz, and 14-day freezer batch prep shopping lists in PDF.">
+  <meta property="og:url" content="https://pacebowl.com/tools/barf-raw-dog-food-calculator/">
+  <meta property="og:image" content="https://pacebowl.com/assets/og-pacebowl.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BARF Raw Dog Food Calculator — 80/10/10 Grams & Oz">
+  <meta name="twitter:description" content="Free BARF (70/10/5/5/7/2/1) & PMR 80/10/10 raw dog food calculator. Compute exact daily grams, oz, and 14-day freezer batch prep shopping lists in PDF.">
+  <meta name="twitter:image" content="https://pacebowl.com/assets/og-pacebowl.png">
+
+  <link rel="stylesheet" href="/assets/css/pacebowl.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pacebowl.com/#organization",
+      "name": "PaceBowl Pet Nutrition",
+      "url": "https://pacebowl.com/",
+      "logo": "https://pacebowl.com/apple-touch-icon.png",
+      "description": "Free veterinary-standard dog and cat feeding, BARF raw diet, food transition, and puppy growth calculators with printable A4 fridge charts.",
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Q144",
+        "https://www.wikidata.org/wiki/Q146",
+        "https://www.wikidata.org/wiki/Q38404",
+        "https://www.wikidata.org/wiki/Q170201"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://pacebowl.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "BARF Raw Dog Food Calculator",
+          "item": "https://pacebowl.com/tools/barf-raw-dog-food-calculator/"
+        }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "name": "PaceBowl BARF & PMR Raw Dog Food Calculator",
+      "url": "https://pacebowl.com/tools/barf-raw-dog-food-calculator/",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "All",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between BARF and PMR 80/10/10 raw dog food?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BARF (Biologically Appropriate Raw Food) uses 70% muscle meat, 10% raw meaty bone, 5% liver, 5% other secreting organ, 7% vegetables, 2% seeds/nuts, and 1% fruit. PMR (Prey Model Raw) omits plant matter and uses 80% muscle meat, 10% bone, 5% liver, and 5% other secreting organ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What percentage of body weight should I feed a raw-fed dog?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most healthy adult dogs thrive at 2.5% of ideal adult body weight per day. Overweight or low-activity dogs typically drop to 2.0%, highly active dogs need 3.0%, and growing puppies require 4% to 8% depending on age."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I prep 14 days of raw dog food in advance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Use the Batch Prep Days field above (7, 14, or 30 days) to calculate exact total pounds and grams of muscle meat, raw meaty bones, liver, and secreting organs for freezer meal prep."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <script>
+  (function () {
+    try {
+      var p = new URLSearchParams(window.location.search).get('umami_ignore');
+      if (p === '1') localStorage.setItem('umami.disabled', '1');
+      else if (p === '0') localStorage.removeItem('umami.disabled');
+    } catch (e) {}
+    window.__matrixUmamiBeforeSend = function (type, payload) {
+      try {
+        if (localStorage.getItem('umami.disabled') === '1') return false;
+        if (navigator.webdriver) return false;
+        if (/HeadlessChrome|Playwright|Puppeteer/i.test(navigator.userAgent || '')) return false;
+        var h = window.location.hostname || '';
+        if (h === 'localhost' || h === '127.0.0.1' || /\.(pages\.dev|workers\.dev|instabox\.tech)$/i.test(h)) return false;
+      } catch (e) {}
+      return payload;
+    };
+  })();
+  </script>
+  <script defer src="https://umami-ruby-alpha-96.vercel.app/script.js" data-website-id="260de255-2ac2-4a9b-a17d-e4aec78f9ab1" data-domains="pacebowl.com,www.pacebowl.com" data-before-send="__matrixUmamiBeforeSend"></script>
+  <script defer src="/assets/js/pacebowl-math.js"></script>
+  <script defer src="/assets/js/pacebowl-pdf.js"></script>
+  <script defer src="/assets/js/pacebowl-feedback.js"></script>
+</head>
+<body>
+  <header class="pb-header">
+    <div class="pb-container pb-nav-inner">
+      <a href="/" class="pb-logo">
+        <span>🐾 PaceBowl</span>
+        <span class="pb-logo-badge">Pet Nutrition</span>
+      </a>
+      <nav class="pb-nav-links" aria-label="Primary Pet Calculators">
+        <a href="/tools/dog-calorie-feeding-calculator/" class="">Dog Calories</a>
+        <a href="/tools/barf-raw-dog-food-calculator/" class="active">BARF Raw Diet</a>
+        <a href="/tools/dog-food-transition-calculator/" class="">7-Day Transition</a>
+        <a href="/tools/cat-calorie-feeding-calculator/" class="">Cat Wet & Dry</a>
+        <a href="/tools/puppy-adult-weight-calculator/" class="">Puppy Weight</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pb-container">
+
+    <nav class="pb-crumb" aria-label="Breadcrumb"><a href="/">Home</a> <span>/</span> <span>BARF Raw Dog Food Calculator</span></nav>
+    <section class="pb-hero">
+      <div class="pb-pill">🥩 BARF 70/10/5/5/7/2/1 &amp; PMR 80/10/10 Standards</div>
+      <h1>BARF &amp; PMR 80/10/10 Raw Dog Food Calculator</h1>
+      <p>Calculate exact daily grams, ounces, and multi-week freezer meal-prep shopping lists for raw-fed dogs and puppies—with instant printable A4 prep sheets.</p>
+    </section>
+
+    <section class="pb-calc-grid">
+      <div class="pb-card">
+        <div class="pb-field">
+          <label for="raw-weight">Dog's Ideal Weight</label>
+          <div class="pb-input-row">
+            <input id="raw-weight" type="number" min="2" max="220" step="0.5" value="50">
+            <select id="raw-unit" style="max-width:100px;"><option value="lb" selected>lbs</option><option value="kg">kg</option></select>
+          </div>
+        </div>
+        <div class="pb-field">
+          <label for="raw-model">Raw Feeding Ratio Model</label>
+          <select id="raw-model">
+            <option value="barf" selected>BARF Model (70% Meat / 10% Bone / 10% Organ / 10% Veg-Fruit)</option>
+            <option value="pmr">PMR Prey Model Raw (80% Meat / 10% Bone / 5% Liver / 5% Organ)</option>
+          </select>
+        </div>
+        <div class="pb-field">
+          <label for="raw-pct">Daily Body Weight Percentage (%)</label>
+          <select id="raw-pct">
+            <option value="2.0">2.0% — Adult Weight Loss / Low Activity</option>
+            <option value="2.5" selected>2.5% — Adult Maintenance (Standard)</option>
+            <option value="3.0">3.0% — Active / Working Adult</option>
+            <option value="4.0">4.0% — Older Puppy (9–12 months)</option>
+            <option value="6.0">6.0% — Growing Puppy (5–8 months)</option>
+            <option value="8.0">8.0% — Young Puppy (2–4 months)</option>
+          </select>
+        </div>
+        <div class="pb-field">
+          <label for="raw-days">Freezer Batch Prep Duration (Days)</label>
+          <select id="raw-days">
+            <option value="7">7 Days (1 Week Batch)</option>
+            <option value="14" selected>14 Days (2 Week Batch)</option>
+            <option value="30">30 Days (1 Month Freezer Prep)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="pb-card pb-card-accent">
+        <div class="pb-kpi-grid">
+          <div class="pb-kpi">
+            <div class="pb-kpi-label">Daily Raw Total</div>
+            <div class="pb-kpi-val" id="raw-daily-g">567 g</div>
+            <div class="pb-kpi-sub" id="raw-daily-oz">20.0 oz / day</div>
+          </div>
+          <div class="pb-kpi">
+            <div class="pb-kpi-label" id="raw-batch-lbl">14-Day Batch Total</div>
+            <div class="pb-kpi-val" id="raw-batch-lbs">17.5 lbs</div>
+            <div class="pb-kpi-sub" id="raw-batch-kg">7.94 kg total</div>
+          </div>
+        </div>
+        <div class="pb-table-wrap">
+          <table class="pb-table">
+            <thead><tr><th>Component</th><th>%</th><th>Daily (g / oz)</th><th>Batch Shopping</th></tr></thead>
+            <tbody id="raw-tbody"></tbody>
+          </table>
+        </div>
+        <button type="button" id="btn-raw-pdf" class="pb-btn pb-btn-primary" style="margin-top:12px;">📄 Download Printable A4 Raw Batch Prep Sheet (PDF)</button>
+      </div>
+    </section>
+
+    <section class="pb-section">
+      <h2>How Much Raw Food Should a Dog Eat Per Day (BARF vs. PMR)?</h2>
+      <div class="pb-card pb-table-wrap">
+        <table class="pb-table">
+          <thead><tr><th>Dog Weight</th><th>2.0% Weight Loss</th><th>2.5% Maintenance</th><th>3.0% Active</th><th>Muscle Meat (70% BARF)</th></tr></thead>
+          <tbody>
+            <tr><td><strong>20 lb (9.1 kg)</strong></td><td>181 g (6.4 oz)</td><td>227 g (8.0 oz)</td><td>272 g (9.6 oz)</td><td>159 g / day</td></tr>
+            <tr><td><strong>40 lb (18.1 kg)</strong></td><td>363 g (12.8 oz)</td><td>454 g (16.0 oz)</td><td>544 g (19.2 oz)</td><td>318 g / day</td></tr>
+            <tr><td><strong>60 lb (27.2 kg)</strong></td><td>544 g (19.2 oz)</td><td>680 g (24.0 oz)</td><td>816 g (28.8 oz)</td><td>476 g / day</td></tr>
+            <tr><td><strong>80 lb (36.3 kg)</strong></td><td>726 g (25.6 oz)</td><td>907 g (32.0 oz)</td><td>1,089 g (38.4 oz)</td><td>635 g / day</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="pb-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="pb-card"><div class="pb-faq-item"><h3>What is the difference between BARF and PMR 80/10/10 raw dog food?</h3><p>BARF (Biologically Appropriate Raw Food) uses 70% muscle meat, 10% raw meaty bone, 5% liver, 5% other secreting organ, 7% vegetables, 2% seeds/nuts, and 1% fruit. PMR (Prey Model Raw) omits plant matter and uses 80% muscle meat, 10% bone, 5% liver, and 5% other secreting organ.</p></div><div class="pb-faq-item"><h3>What percentage of body weight should I feed a raw-fed dog?</h3><p>Most healthy adult dogs thrive at 2.5% of ideal adult body weight per day. Overweight or low-activity dogs typically drop to 2.0%, highly active dogs need 3.0%, and growing puppies require 4% to 8% depending on age.</p></div><div class="pb-faq-item"><h3>Can I prep 14 days of raw dog food in advance?</h3><p>Yes. Use the Batch Prep Days field above (7, 14, or 30 days) to calculate exact total pounds and grams of muscle meat, raw meaty bones, liver, and secreting organs for freezer meal prep.</p></div></div>
+    </section>
+    
+    <section class="pb-section" aria-label="More Pet Feeding Calculators">
+      <h2>Explore More PaceBowl Pet Nutrition Calculators</h2>
+      <div class="pb-tools-grid">
+        <a href="/tools/dog-calorie-feeding-calculator/" class="pb-tool-card">
+          <div>
+            <div style="font-size:24px;">🐕</div>
+            <h3>Dog Calorie & Feeding Calculator</h3>
+            <p>Calculate exact daily kcal, grams, and cups using WSAVA RER/DER formulas.</p>
+          </div>
+          <span class="pb-tool-cta">Open Calculator &rarr;</span>
+        </a>
+        <a href="/tools/dog-food-transition-calculator/" class="pb-tool-card">
+          <div>
+            <div style="font-size:24px;">🔄</div>
+            <h3>7-Day Dog Food Transition Chart</h3>
+            <p>Calorie-matched day-by-day old vs. new kibble mixing schedule to prevent upset stomach.</p>
+          </div>
+          <span class="pb-tool-cta">Open Calculator &rarr;</span>
+        </a>
+        <a href="/tools/cat-calorie-feeding-calculator/" class="pb-tool-card">
+          <div>
+            <div style="font-size:24px;">🐈</div>
+            <h3>Cat Wet & Dry Feeding Calculator</h3>
+            <p>Balance daily wet cans with exact remaining dry kibble grams for indoor cats.</p>
+          </div>
+          <span class="pb-tool-cta">Open Calculator &rarr;</span>
+        </a>
+        <a href="/tools/puppy-adult-weight-calculator/" class="pb-tool-card">
+          <div>
+            <div style="font-size:24px;">🐶</div>
+            <h3>Puppy Adult Weight Predictor</h3>
+            <p>Estimate your puppy's full adult weight range and milestone growth chart by breed size.</p>
+          </div>
+          <span class="pb-tool-cta">Open Calculator &rarr;</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pb-footer">
+    <div class="pb-container pb-footer-inner">
+      <div>
+        <strong>PaceBowl Pet Nutrition Studio</strong> · Based on WSAVA &amp; NRC veterinary nutrition formulas. For educational use; consult your veterinarian for medical diets.
+      </div>
+      <div class="pb-footer-links">
+        <a href="/tools/dog-calorie-feeding-calculator/">Dog Calories</a>
+        <a href="/tools/barf-raw-dog-food-calculator/">BARF Raw</a>
+        <a href="/tools/dog-food-transition-calculator/">7-Day Transition</a>
+        <a href="/tools/cat-calorie-feeding-calculator/">Cat Wet &amp; Dry</a>
+        <a href="/tools/puppy-adult-weight-calculator/">Puppy Weight</a>
+        <a href="/llms.txt">llms.txt</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function(){
+      function run(){
+        if(!window.PaceBowlMath) return;
+        const r = window.PaceBowlMath.calcRawDogFood({
+          weight: document.getElementById('raw-weight').value,
+          unit: document.getElementById('raw-unit').value,
+          model: document.getElementById('raw-model').value,
+          bodyPct: document.getElementById('raw-pct').value,
+          prepDays: document.getElementById('raw-days').value,
+        });
+        document.getElementById('raw-daily-g').textContent = r.dailyGrams + ' g';
+        document.getElementById('raw-daily-oz').textContent = r.dailyOz + ' oz / day (' + r.bodyPct + '% BW)';
+        document.getElementById('raw-batch-lbl').textContent = r.prepDays + '-Day Batch Total';
+        document.getElementById('raw-batch-lbs').textContent = r.batchLbs + ' lbs';
+        document.getElementById('raw-batch-kg').textContent = r.batchKg + ' kg total';
+        document.getElementById('raw-tbody').innerHTML = r.breakdown.map(b =>
+          '<tr><td><strong>' + b.label + '</strong></td><td>' + b.pct + '%</td><td>' + b.dailyGrams + ' g (' + b.dailyOz + ' oz)</td><td>' + b.batchLbs + ' lbs (' + b.batchGrams + ' g)</td></tr>'
+        ).join('');
+        window.__lastRaw = r;
+      }
+      ['raw-weight','raw-unit','raw-model','raw-pct','raw-days'].forEach(id=>{
+        document.getElementById(id).addEventListener('input', run);
+        document.getElementById(id).addEventListener('change', run);
+      });
+      document.getElementById('btn-raw-pdf').addEventListener('click', function(){
+        const r = window.__lastRaw;
+        if(!r || !window.PaceBowlPdf) return;
+        window.PaceBowlPdf.downloadFeedingChartPdf({
+          title: 'Raw Dog Food Batch Prep Sheet (' + r.modelLabel + ')',
+          filename: 'PaceBowl-BARF-Raw-Prep-' + r.prepDays + 'days.pdf',
+          summaryRows: [
+            ['Dog Ideal Weight:', r.weightLb + ' lbs (' + r.weightKg + ' kg) at ' + r.bodyPct + '% Body Weight/Day'],
+            ['Raw Ratio Model:', r.modelLabel],
+            ['Daily Portion Total:', r.dailyGrams + ' g/day (' + r.dailyOz + ' oz/day)'],
+            [r.prepDays + '-Day Freezer Batch:', r.batchLbs + ' lbs (' + r.batchKg + ' kg) total ingredients']
+          ],
+          tableTitle: 'EXACT COMPONENT BREAKDOWN & BATCH SHOPPING LIST',
+          tableHeaders: ['Ingredient Category', 'Ratio', 'Daily Grams', 'Daily Oz', r.prepDays + '-Day Batch'],
+          tableRows: r.breakdown.map(b => [b.label, b.pct + '%', b.dailyGrams + ' g', b.dailyOz + ' oz', b.batchLbs + ' lbs (' + b.batchGrams + ' g)']),
+          notes: [
+            'Never feed cooked bones; only raw, non-weight-bearing meaty bones sized safely for your dog.',
+            'Rotate at least 3 to 4 animal proteins (e.g. chicken, beef, turkey, lamb, sardines) over each month.',
+            'Thaw frozen raw meals in the refrigerator (38-40F) and sanitize bowls after every meal.'
+          ]
+        });
+      });
+      window.addEventListener('DOMContentLoaded', run);
+      setTimeout(run, 120);
+    })();</script>
+</body>
+</html>
