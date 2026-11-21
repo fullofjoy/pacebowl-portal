@@ -1335,4 +1335,6 @@ if __name__ == "__main__":
     build_cat_calorie_page()
     build_puppy_weight_page()
     build_infra()
-    print("ALL PACEBOWL PET NUTRITION PAGES & SEO/GEO/AEO INFRA BUILT SUCCESSFULLY!")
+    import subprocess, sys
+    subprocess.check_call([sys.executable, os.path.join(ROOT, "scripts", "build_eeat_layer.py")])
+    print("ALL PACEBOWL PET NUTRITION PAGES & SEO/GEO/AEO/E-E-A-T INFRA BUILT SUCCESSFULLY!")

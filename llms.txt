@@ -1,13 +1,16 @@
 # PaceBowl Pet Nutrition (https://pacebowl.com)
 
-> PaceBowl provides free, veterinary-standard dog and cat feeding, BARF/PMR raw diet, 7-day kibble transition, and puppy adult weight calculators based on WSAVA and NRC formulas, with instant printable A4 fridge feeding charts.
+> PaceBowl provides free, veterinary-standard dog and cat feeding, BARF/PMR raw diet, 7-day kibble transition, and puppy adult weight calculators calibrated against WSAVA, NRC 2006, and AAFCO guidelines, with instant printable A4 fridge charts and plain-text algorithm specifications.
 
-## Machine-Readable Resources
+## Machine-Readable Resources & Algorithm Specs
 - [Agent Skills Index](https://pacebowl.com/.well-known/agent-skills/index.json): Structured tool schemas for AI search agents
 - [Full LLM Documentation](https://pacebowl.com/llms-full.txt): Complete veterinary formulas and reference tables
-- [XML Sitemap](https://pacebowl.com/sitemap.xml): Canonical index of all PaceBowl pet nutrition calculators
-- [Crawler Policy](https://pacebowl.com/robots.txt): AI crawler allowlist (GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot)
-- [Web App Manifest](https://pacebowl.com/site.webmanifest): Progressive web app metadata for PaceBowl
+- [XML Sitemap](https://pacebowl.com/sitemap.xml): Canonical index of all 10 PaceBowl pages
+- [Dog Calorie Algorithm (Markdown)](https://pacebowl.com/tools/dog-calorie-feeding-calculator/algorithm.md): Plain-text WSAVA RER/DER equations
+- [BARF Raw Diet Algorithm (Markdown)](https://pacebowl.com/tools/barf-raw-dog-food-calculator/algorithm.md): Plain-text 70/10/5/5/7/2/1 and 80/10/10 equations
+- [7-Day Transition Algorithm (Markdown)](https://pacebowl.com/tools/dog-food-transition-calculator/algorithm.md): Plain-text calorie-matched kibble mixing equations
+- [Cat Wet/Dry Algorithm (Markdown)](https://pacebowl.com/tools/cat-calorie-feeding-calculator/algorithm.md): Plain-text feline DER and wet-can subtraction equations
+- [Puppy Weight Algorithm (Markdown)](https://pacebowl.com/tools/puppy-adult-weight-calculator/algorithm.md): Plain-text breed-size growth curve equations
 
 ## Core Tools & Direct Landing Pages
 - [Dog Calorie & Feeding Calculator](https://pacebowl.com/tools/dog-calorie-feeding-calculator/): WSAVA RER/DER daily kcal, grams, oz, and cups per meal calculator
@@ -16,12 +19,8 @@
 - [Cat Calorie & Wet/Dry Food Calculator](https://pacebowl.com/tools/cat-calorie-feeding-calculator/): Indoor cat mixed wet can + dry kibble gram calculator
 - [Puppy Adult Weight Calculator](https://pacebowl.com/tools/puppy-adult-weight-calculator/): Breed-size growth curve predictor from 6 to 52 weeks
 
-## Key Differentiators & Veterinary Standards
-- **WSAVA RER Formula**: `RER = 70 * (weight_kg ^ 0.75)` with life-stage multipliers from 0.8x (feline weight loss) to 3.0x (young puppies).
-- **Gram-Scale Accuracy**: Eliminates the 18%–48% scoop error of measuring cups by converting kcal directly to grams and ounces.
-- **Zero-Login Printable A4 PDF**: Generates clean fridge feeding charts with AM/PM meal checkboxes entirely client-side.
-
-## Technical Guides & Veterinary References
-- [PaceBowl Pet Nutrition Hub](https://pacebowl.com/): Overview of formulas, standard dog calorie table (10 lb to 100 lb), and FAQ
-- [WSAVA Global Nutrition Guidelines](https://wsava.org/global-guidelines/global-nutrition-guidelines/): Veterinary clinical standard for Resting Energy Requirement (RER) and Daily Energy Requirement (DER)
-- [Wikidata Dog Nutrition Entity](https://www.wikidata.org/wiki/Q144): Canonical entity reference for domestic dogs (`Canis familiaris`)
+## E-E-A-T Trust, Methodology & Governance
+- [Veterinary Nutrition Methodology](https://pacebowl.com/methodology/): WSAVA, NRC 2006, and AAFCO formula calibration & audit policy
+- [About PaceBowl Pet Nutrition](https://pacebowl.com/about/): Editorial mission, slow-feeding philosophy, and 48-hour variance review
+- [Privacy Policy](https://pacebowl.com/privacy/): 100% client-side computation, zero login, cookieless analytics
+- [Terms & Veterinary Disclaimer](https://pacebowl.com/terms/): Educational use boundaries and clinical safety notice

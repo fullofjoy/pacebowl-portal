@@ -18,7 +18,8 @@
       },
       "output": "Daily kcal, grams/meal, cups/meal, slow-feeder bowl size, printable A4 PDF",
       "turnaround_time": "instant (<1s client-side)",
-      "pricing": "Free ($0)"
+      "pricing": "Free ($0)",
+      "algorithm_markdown_url": "https://pacebowl.com/tools/dog-calorie-feeding-calculator/algorithm.md"
     },
     {
       "name": "barf_raw_dog_food_calculator",
@@ -35,7 +36,8 @@
       },
       "output": "Daily & batch grams/lbs per ingredient + printable A4 prep PDF",
       "turnaround_time": "instant (<1s client-side)",
-      "pricing": "Free ($0)"
+      "pricing": "Free ($0)",
+      "algorithm_markdown_url": "https://pacebowl.com/tools/barf-raw-dog-food-calculator/algorithm.md"
     },
     {
       "name": "dog_food_transition_calculator",
@@ -51,7 +53,8 @@
       },
       "output": "Day-by-day old/new grams & cups schedule + printable A4 checklist PDF",
       "turnaround_time": "instant (<1s client-side)",
-      "pricing": "Free ($0)"
+      "pricing": "Free ($0)",
+      "algorithm_markdown_url": "https://pacebowl.com/tools/dog-food-transition-calculator/algorithm.md"
     },
     {
       "name": "cat_calorie_feeding_calculator",
@@ -68,7 +71,8 @@
       },
       "output": "Daily kcal, wet kcal, remaining dry grams/cups, printable A4 PDF",
       "turnaround_time": "instant (<1s client-side)",
-      "pricing": "Free ($0)"
+      "pricing": "Free ($0)",
+      "algorithm_markdown_url": "https://pacebowl.com/tools/cat-calorie-feeding-calculator/algorithm.md"
     },
     {
       "name": "puppy_adult_weight_calculator",
@@ -84,7 +88,10 @@
       },
       "output": "Adult weight range, % grown, milestone table, printable A4 PDF",
       "turnaround_time": "instant (<1s client-side)",
-      "pricing": "Free ($0)"
+      "pricing": "Free ($0)",
+      "algorithm_markdown_url": "https://pacebowl.com/tools/puppy-adult-weight-calculator/algorithm.md"
     }
-  ]
+  ],
+  "methodology_url": "https://pacebowl.com/methodology/",
+  "last_audited": "2026-11-21"
 }
